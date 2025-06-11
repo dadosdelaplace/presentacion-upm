@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<script src="DIA_files/libs/clipboard/clipboard.min.js"></script>
+<script src="DIA_files/libs/quarto-html/tabby.min.js"></script>
+<script src="DIA_files/libs/quarto-html/popper.min.js"></script>
+<script src="DIA_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="DIA_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="DIA_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="DIA_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="DIA_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
+
+  <meta name="author" content="Departamento de Matemática e Informática aplicadas a las Ingenierías Civil y Naval">
+  <title>Concurso de plaza de Ayudante Doctor</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="DIA_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="DIA_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="DIA_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="DIA_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="DIA_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="DIA_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="DIA_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="DIA_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="DIA_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Concurso de plaza de Ayudante Doctor</h1>
+  <p class="subtitle">Presentación de CV de Javier Álvarez Liébana</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Departamento de Matemática e Informática aplicadas a las Ingenierías Civil y Naval 
+</div>
+</div>
+</div>
+
+</section>
+<section id="concurso-de-plaza" class="slide level2">
+<h2>Concurso de plaza</h2>
+
+<img data-src="plaza-caminos.jpg" width="150" class="r-stretch"><ul>
+<li><span class="hl-orange"><strong>Área de Conocimiento</strong></span>: Ciencia de la Computación e Inteligencia Artificial</li>
+<li><span class="hl-orange"><strong>Perfil docente</strong></span>:
+<ul>
+<li>Informática (Grado en Ingeniería Civil y Territorial, Doble Grado en Ingeniería Civil y Territorial y ADE)</li>
+<li>Ciencia de Datos (Máster en Ingeniería de Caminos, Canales y Puertos)</li>
+<li>Estadística Computacional (Máster en Ingeniería de Caminos, Canales y Puertos)</li>
+</ul></li>
+</ul>
+</section>
+<section id="resumen-de-cv" class="slide level2">
+<h2>Resumen de CV</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/me.jpeg?raw=true"></p>
+</div><div class="column" style="width:75%;">
+<div>
+<ul>
+<li class="fragment"><p><span class="hl-orange"><strong>Javier Álvarez Liébana</strong></span>, de Carabanchel (Bajo).</p></li>
+<li class="fragment"><p>Licenciado en Matemáticas (2011-2012, UCM). Máster en Ingeniería Matemática (UCM). <span class="hl-orange"><strong>Doctorado en estadística matemática</strong></span> (UGR).</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Acreditado como Contratado Doctor (2022)</strong></span> (AD desde 2018).</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>1 tramo de DOCENTIA</strong></span> con calificación de Excelente (2021-2024) <strong>más de 1800h de docencia</strong> y 20 TFM. <span class="hl-orange"><strong>1 sexenio concedido (2016-2021)</strong></span>.</p></li>
+<li class="fragment"><p>Profesor sustituto (2018-2020, UNIOVI). Profesor Ayudante Doctor (2020-2021, UNIOVI). <span class="hl-orange"><strong>Profesor Ayudante Doctor (2021-actual, UCM)</strong></span>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<ul>
+<li class="fragment"><p>Responsable de un <span class="hl-orange"><strong>artículo 83 con la Consejería de Salud del Principado de Asturias (2021-2022)</strong></span>. Formador en estadística y software en el <span class="hl-orange"><strong>Ayto de Madrid (2023), RTVE (2023-2025) e ISCIII (2025)</strong></span></p></li>
+<li class="fragment"><p>Estancias predoctorales en la UPMC de París (6 meses). <strong>Estancias postdoctorales en la USC</strong> (1 mes y medio) y <span class="hl-orange"><strong>Harvard/ Northeastern University</strong></span> (4 meses y medio en total, 2024 y 2025)</p></li>
+<li class="fragment"><p>Miembro de las comisiones de divulgación de la <span class="hl-orange"><strong>Sociedad Española de Estadística e IO</strong></span> y la <span class="hl-orange"><strong>Real Sociedad Matemática Española</strong></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="bloque-i-formación-académica" class="slide level2">
+<h2>Bloque I: formación (académica)</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<ul>
+<li><span class="hl-orange"><strong>Licenciatura en Matemáticas</strong></span> (UCM, 2017-2013) con especialidad en astronomía y geodesia, con <span class="hl-orange"><strong>beca Erasmus</strong></span> para cursar 2011-2012 en la Universidad de Bologna. Durante el 2012-2013 trabajé con una <span class="hl-orange"><strong>beca de colaboración</strong></span> realizando trabajos de preprocesamiento de datos en Matlab y Python aplicado a la <strong>inversión gravimétrica</strong></li>
+</ul>
+</div><div class="column" style="width:25%;">
+<p><img data-src="https://matematicas.ucm.es/file/pin-50aniv-ciencias-rectangular-azul-1?ver=n.png"></p>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li><p><span class="hl-orange"><strong>Máster en Ingeniería Matemática</strong></span> (UCM, 2013-2014)</p>
+<ul>
+<li>Técnicas de simulación, optimización y teoría de colas</li>
+<li>Ecuaciones diferenciales y elementos finitos</li>
+<li>Métodos de Machine Learning y programación paralela</li>
+<li>Participé en la VIII Modelling Week organizada por el Instituto de matemáticas Interdisciplinar (IMI) colaborando en el proyecto «<span class="hl-orange"><strong>Cognitive manipulation in robots and artificial agents</strong></span>»</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p>En 2014 defendí mi TFM <span class="hl-orange"><strong>«Machine Learning, non-supervised learning techniques: clustering applied to character recognition»</strong></span> bajo la supervisión de Alba María Franco Pereira.</p>
+</div>
+</section>
+<section id="bloque-i-formación-académica-1" class="slide level2">
+<h2>Bloque I: formación (académica)</h2>
+<ul>
+<li><span class="hl-orange"><strong>Doctorado en Estadística Matemática y Aplicada</strong></span> (UGR, 2014-2018). El doctorado se realizó tras ganar un <span class="hl-orange"><strong>contrato FPI</strong></span> en la convocatoria de 2013, asociado al proyecto MTM2012-3267</li>
+</ul>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:52%;">
+<p>La tesis, titulada «Inference on linear processes in Hilbert and Banach spaces. Statistical analysis of high-dimensional data», desarrolló herramientas para <span class="hl-orange"><strong>modelizar relaciones lineales entre variables aleatorias correladas en el tiempo en contextos de alta dimensionalidad</strong></span> (infinito-dimensionales). Los resultados fueron aplicados en campos como la economía, mercado eléctrico, meteorología, cambio climático y neurociencia.</p>
+</div><div class="column" style="width:48%;">
+<p><img data-src="https://ars.els-cdn.com/content/image/1-s2.0-S0167947324001762-gr001_lrg.jpg" width="680"></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>La tesis fue calificada con <span class="hl-orange"><strong>Cum Laude</strong></span> y recibió el <span class="hl-orange"><strong>certificado de mención internacional</strong></span>. Durante el doctorado asistí a diversos cursos de posgrado así como a congresos internacionales y nacionales. En 2018 fui elegido como representante nacional de la SEIO en eventos internacionales y nacionales.</li>
+</ul>
+</div>
+</section>
+<section id="bloque-i-formación-académica-2" class="slide level2">
+<h2>Bloque I: formación (académica)</h2>
+<p>Algunos de los <span class="hl-orange"><strong>resultados teóricos y prácticos más relevantes de la tesis</strong></span> acabaron plasmados en el artículo «Prediction of air pollutants PM10 by ARBX(1) processes» (2019). Javier Álvarez Liébana, María Dolores Ruiz Medina. <strong>Stochastic Environ. Research Risk Assess. 33 (Q1)</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>En este trabajo se extienden los resultados que se habían desarrollado en los primeros años de la tesis en espacios de Hilbert a espacios de Banach (funciones que permiten una mayor singularidad), demostrando la consistencia (strong-consistency) de los estimadores planteados, las hipótesis necesarias y su aplicación a un caso de eminente interés actual: la <span class="hl-orange"><strong>predicción de partículas contaminantes PM10</strong></span> (en una región de Normandía), no como dato invididual sino desde una perspectiva de predicción de curvas.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="scandinavian.jpg"></p>
+</div>
+</div>
+</section>
+<section id="bloque-i-cursos-posgrado" class="slide level2">
+<h2>Bloque I: cursos posgrado</h2>
+<ul>
+<li><p>[<span style="color:#f39b4f">ciencia de datos</span>, <span style="color:#b49fe8">estadística computacional</span>, <span style="color:#7ae8b5">informática</span>] «Using Ollama to deploy <span class="hl-orange"><strong>local LLM with R integration</strong></span>» (2h, UCM, 2025)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] «An introduction to <span class="hl-orange"><strong>JupyterLab</strong></span>» (1h, UC3M, 2019)</p></li>
+<li><p>[<span style="color:#b49fe8">ec</span>] «Mathematical methods for the solution of inverse problems» (10h, USC, 2018).</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] «The <span class="hl-orange"><strong>Role of Mathematical Programming in Data Science</strong></span>» (10h, USC, 2018).</p></li>
+<li><p>[<span style="color:#b49fe8">ec</span>] «<span class="hl-orange"><strong>High dimensional statistics</strong></span>, theory and practice» (24h, ECAS-SFDS, 2017)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] «Unhappy with semiparametrics?» (2h, UGR, 2017)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] «Ciencia de datos: un enfoque práctico en la era del <span class="hl-orange"><strong>Big Data</strong></span>» (30h, UGR, 2017).</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] «Recursos para el análisis estadístico de datos» (25h, UGR, 2016).</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] «Trimestre Thematique Apprentissage CIMI <span class="hl-orange"><strong>Machine Learning</strong></span>» (35h, CIMI, 2015)</p></li>
+<li><p>[<span style="color:#7ae8b5">inf</span>] «Introducción a la <span class="hl-orange"><strong>programación en Matlab</strong></span>» (25h, UGR, 2015).</p></li>
+<li><p>[<span style="color:#b49fe8">ec</span>] «Avances en la desagregación territorial de los datos estadísticos» (2h, UGR, 2015)</p></li>
+</ul>
+</section>
+<section id="bloque-i-cursos-formación-docente" class="slide level2">
+<h2>Bloque I: cursos formación docente</h2>
+<ul>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] «El <span class="hl-orange"><strong>poder transformador de la IA</strong></span>: innovación, impacto e implicaciones en nuestra sociedad» (2h, UCM, 2024)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] «Introducción a las <span class="hl-orange"><strong>herramientas IA generativa para la docencia</strong></span>» (12h, UCM, 2023)</p></li>
+<li><p>[<span style="color:#7ae8b5">inf</span>] «¿Cómo utilizar el campus virtual?». Nivel avanzado (20h, UNIOVI, 2019)</p></li>
+<li><p>[<span style="color:#7ae8b5">inf</span>] «¿Cómo utilizar el campus virtual?». Nivel básico (20h, UNIOVI, 2019)</p></li>
+<li><p>«Liderar el cambio» (5h, UGR, 2015).</p></li>
+</ul>
+<div class="fragment">
+<p>Actualmente soy miembro del <span class="hl-orange"><strong>proyecto de innovación docente</strong></span> «Utilización de un escape room virtual como recurso docente de la asignatura de farmacología». También dispongo de <span class="hl-orange"><strong>manuales y material docente</strong></span>, por ejemplo, el manual «Introducción a R: Aprendiendo R sin morir en el intento (<a href="https://aprendiendo-r-intro.netlify.app/" class="uri">https://aprendiendo-r-intro.netlify.app/</a>) <span class="hl-orange"><strong>recomendado por</strong></span> la plataforma <a href="https://datos.gob.es/" class="uri">https://datos.gob.es/</a> de la <span class="hl-orange"><strong>Secretaria de Estado de Digitalización e IA</strong></span>.</p>
+</div>
+</section>
+<section id="bloque-i-asistente-seminarios" class="slide level2">
+<h2>Bloque I: asistente seminarios</h2>
+<p>(solo se incluyen aquellos cuya participación se redujo a la mera asistencia como oyente)</p>
+<ul>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] «A comparative performance analysis of <span class="hl-orange"><strong>data resampling methods on imbalance</strong></span> medical data» (seminario, UCM, 2025)</p></li>
+<li><p>[<span style="color:#b49fe8">ec</span>] «Desarrollo de metodologías para <span class="hl-orange"><strong>estimar efectos causales</strong></span> (seminario, UCM, 2025)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] «Tratamiento de <span class="hl-orange"><strong>medidas repetidas en datos transcriptómicos</strong></span> con resolución espacial» (seminario, UCM, 2024)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] «AI Horizons 2024: explorando el euturo de la <span class="hl-orange"><strong>Inteligencia Artificial</strong></span>» (congreso, UC3M, 2024)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] «Reglas de asociación para <span class="hl-orange"><strong>datos ómicos</strong></span>» (seminario, UCM, 2023)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] 14ª Jornada FuzzyMAD (congreso/jornadas, UCM, 2021).</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>] <span class="hl-orange"><strong>«Spatio-temporal statistical analysis of the violence</strong></span>: an application to the metropolitan area of Río de Janeiro» (seminario, USC, 2018).</p></li>
+</ul>
+</section>
+<section id="bloque-ii-experiencia-docente" class="slide level2">
+<h2>Bloque II: experiencia (docente)</h2>
+<p>Desde 2014 he impartido <span class="hl-orange"><strong>más de 1800 horas de docencia</strong></span>, así como la <span class="hl-orange"><strong>dirección de 20 TFM</strong></span>. Además la docencia ha sido evaluada por un <span class="hl-orange"><strong>tramo docentia (2021-2024)</strong></span> con calificación de <strong>Excelente</strong>.</p>
+<div class="smaller-un-poquito-text">
+<div>
+<ul>
+<li class="fragment"><span class="hl-blue"><strong>Aprendizaje Supervisado I</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] en el Grado en Ciencia de Datos Aplicada (UCM, 23-24 y 24-25): <span style="color:#b49fe8">ANOVA, modelos lineales, selección stepwise de modelos, regresión penalizada</span>, <span style="color:#f39b4f">regresión logística</span>, <span style="color:#b49fe8">simulación de modelos</span>.</li>
+<li class="fragment"><span class="hl-blue"><strong>Software II</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] en el Grado en Ciencia de Datos Aplicada (UCM, 23-24 y 24-25): introducción a la <span style="color:#7ae8b5">programación en R base y tidyverse</span>, <span style="color:#f39b4f">visualización de datos con R</span> y datawrapper.</li>
+<li class="fragment"><span class="hl-blue"><strong>Series Temporales</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] en el Grado de Estadística Aplicada (UCM, 24-25): introducción a la modelización de <span style="color:#b49fe8">datos correlados en el tiempo (ARIMA, suavizado exponencial, outliers, etc)</span>.</li>
+<li class="fragment"><span class="hl-blue"><strong>Descripción y exploración de datos</strong></span> [<span style="color:#f39b4f">cd</span>] en el Grado de Estadística Aplicada (UCM, 21-22, 22-23): introducción a la estadística unidimensional y bidimensional, <span style="color:#f39b4f">visualización de datos</span>.</li>
+<li class="fragment"><span class="hl-blue"><strong>Estadística</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] en los <strong>Grados de Ingeniería Civil, Ingeniería Química, Ingeniería Informática, Ingeniería Industrial</strong>, Fisioterapia, Ciencias Ambientales (UGR y UNIOVI, 16-17, 18-19, 19-20, 20-21): introducción a la estadística, <span style="color:#b49fe8">distribuciones de probabilidad</span> e inferencia estadística en SPSS y R.</li>
+<li class="fragment"><span class="hl-blue"><strong>Programación Matemática</strong></span> [<span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] en los Grados de Matemáticas y Doble Grado de Matemáticas y Física (UNIOVI, 20-21): técnicas de <span style="color:#7ae8b5">optimización e investigación operativa en Matlab y Python</span>.</li>
+<li class="fragment"><span class="hl-blue"><strong>Probabilidad</strong></span> [<span style="color:#b49fe8">ec</span>] en el Grado de Matemáticas (UGR, 15-16).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="bloque-ii-experiencia-docente-1" class="slide level2">
+<h2>Bloque II: experiencia (docente)</h2>
+<p>Desde 2014 he impartido <span class="hl-orange"><strong>más de 1800 horas de docencia</strong></span>, así como la <span class="hl-orange"><strong>dirección 20 TFM</strong></span>. Además la docencia ha sido evaluada por un <span class="hl-orange"><strong>tramo docentia (2021-2024)</strong></span> con calificación de <strong>Excelente</strong>.</p>
+<div>
+<ul>
+<li class="fragment"><p><span class="hl-blue"><strong>Herramientas Bioinformáticas: programación y estadística R</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] en el Máster en Bioinformática y Ciencia de Datos en Medicina Personalizada de Precisión y Salud (Escuela Nacional de Sanidad - ISCIII, 24-25): introducción a la ciencia de datos en R y Python, <span style="color:#b49fe8">análisis de asociación</span>, <span style="color:#f39b4f">visualización de datos</span>.</p></li>
+<li class="fragment"><p><span class="hl-blue"><strong>Software para Gestión de Bases de Datos</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] en el Máster en Bioestadística (UCM, 22-23, 23-24, 24-25): introducción a la <span style="color:#f39b4f">depuración y modelización</span> de datos en <span style="color:#7ae8b5">R y Stata</span>.</p></li>
+<li class="fragment"><p><span class="hl-blue"><strong>Programación de Datos</strong></span> e <span class="hl-blue"><strong>Introducción a la Programación en R</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] en el Máster en Ciencias Sociales Computacionales (UC3M, 23-24, 24-25, <strong>docencia en inglés</strong>): introducción a la <span style="color:#7ae8b5">depuración y modelización de datos en R y SQL</span> adaptado a científicos sociales</p></li>
+<li class="fragment"><p><span class="hl-blue"><strong>Técnicas y Metodología de la Minería de Datos</strong></span> [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] en el Máster en Ciencia de datos e Inteligencia de Negocios (UCM, 21-22, 22-23): técnicas de minería de datos, depuración, <span style="color:#b49fe8">modelos lineales</span>, <span style="color:#f39b4f">modelos de clasificación supervisada</span> (knn, árboles, etc), <span style="color:#f39b4f">técnicas de validación</span> y <span style="color:#f39b4f">técnicas no supervisadas (PCA, clustering, redes neuronales)</span> impartido en <span style="color:#7ae8b5">R, SAS y Python</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="bloque-ii-experiencia-docente-2" class="slide level2">
+<h2>Bloque II: experiencia (docente)</h2>
+<p>Durante estos años he dirigido o codirigido 20 TFM (nota mediana: 8.4) entre los que destacan:</p>
+<div class="smaller-un-poquito-text">
+<div>
+<ul>
+<li class="fragment"><p>«Estudio de predicción del riesgo de mortalidad en personas con VIH utilizando métodos de Machine Learning» (Rafael Farias, 2025) <span style="color:#b49fe8">desarrollando metodologías de Machine Learning adaptadas a datos longitudinales</span>.</p></li>
+<li class="fragment"><p>«Clasificación supervisada de imágenes de resonancia magnética para la detección de enfermedad de Alzheimer» (Elisa Caballero, 2024) en el que se <span style="color:#7ae8b5">desarrollaron técnicas de preprocesamiento de imágenes resonancias</span> con el fin de poder <span style="color:#f39b4f">clasificar de manera supervisada</span> los distintos tipos de demencia sin información clínica.</p></li>
+<li class="fragment"><p>«Estudio de datos inmunológicos en cáncer mediante el uso de técnicas de análisis composicional» (Olga Fresco, 2024) donde se <span style="color:#b49fe8">desarrollaron técnicas de clustering a datos composicionales</span> para datos inmunológicos.</p></li>
+<li class="fragment"><p>«Aplicación de técnicas de Deep Learning para la búsqueda e identificación de exoplanetas a través del método del tránsito astronómico» (Iván González, 2023) donde aplicaron <span style="color:#f39b4f">técnicas de Deep Learning para la clasificación de exoplanetas</span> haciendo uso de información fotométrica y espectroscópica.</p></li>
+<li class="fragment"><p>«Predicción del voto electoral en España mediante encuestadoras y variables fundamentales» (Enric Palau, 2023) aplicando <span style="color:#f39b4f">técnicas de predicción</span> y <span style="color:#b49fe8">simulación</span> para la predicción de intención de voto y reparto de escaños.</p></li>
+<li class="fragment"><p>«Análisis y clasificación del retraso de los vuelos comerciales de Estados Unidos en 2019» (Almudena María, 2022) aplicando <span style="color:#f39b4f">técnicas de Machine Learning para la predicción</span> del retraso de vuelos<span style="color:#7ae8b5">integrando datos meteorológicos</span>.</p></li>
+<li class="fragment"><p>«Aplicación de técnicas de Machine Learning en la clasificación de noticias falsas» (Iván Frías, 2022) en el que se aplicaban <span style="color:#f39b4f">técnicas de modelos de lenguaje y minería de textos para la clasificación</span> de noticias.</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="bloque-ii-experiencia-docente-3" class="slide level2">
+<h2>Bloque II: experiencia (docente)</h2>
+<h3 id="innovación-y-material-docente">Innovación y material docente</h3>
+<p>Actualmente soy miembro del <span class="hl-orange"><strong>proyecto de innovación docente</strong></span> «Utilización de un escape room virtual como recurso docente de la asignatura de farmacología».</p>
+<p>&nbsp;</p>
+<div class="columns">
+<div class="column" style="width:44%;">
+<p>También dispongo de <span class="hl-orange"><strong>manuales y material docente</strong></span>, por ejemplo, el manual «Introducción a R: Aprendiendo R sin morir en el intento (<a href="https://aprendiendo-r-intro.netlify.app/" class="uri">https://aprendiendo-r-intro.netlify.app/</a>) recomendado por la plataforma <a href="https://datos.gob.es/" class="uri">https://datos.gob.es/</a> de la Secretaria de Estado de Digitalización e IA.</p>
+</div><div class="column" style="width:56%;">
+<p><img data-src="data.gob.jpg" width="1200"></p>
+</div>
+</div>
+</section>
+<section id="bloque-ii-experiencia-docente-4" class="slide level2">
+<h2>Bloque II: experiencia (docente)</h2>
+<ul>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] <span class="hl-orange"><strong>«Curso de análisis de datos en RTVE»</strong></span> (60h, RTVE, 2023 y 2025)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#7ae8b5">inf</span>] «Análisis de <span class="hl-orange"><strong>Big Data con R</strong></span>» (25h, Ayuntamiento de Madrid, 2023)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] <span class="hl-orange"><strong>Aprendizaje no supervisado: PCA y clustering</strong></span> (impartida en Python y R) en los títulos propios Máster Big Data &amp; Business Analytics y Máster Big Data y Data Science (21-22 y 22-23).</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] «Analizando datos, <span class="hl-orange"><strong>visualizando información</strong></span>, contando historias: introducción al análisis y visualización de datos con R» (25h, Fundación General de la UCM, 2022).</p></li>
+</ul>
+<p>&nbsp;</p>
+<div class="fragment">
+<p>Otros <span class="hl-orange"><strong>cursos y seminarios de formación</strong></span> que he impartido</p>
+<ul>
+<li><p>[<span style="color:#f39b4f">cd</span>] «Matemáticos en pandemia: infiltrados en las trincheras de la salud pública» (2h, Centro Nacional de Biotecnología, 2022)</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] «Introducción a la programación en R y visualización de datos» (8h, UBadajoz, 2021)</p></li>
+<li><p>[<span style="color:#7ae8b5">inf</span>] «Taller de <span class="hl-orange"><strong>LaTeX</strong></span>» (14h, UGR, 2017).</p></li>
+</ul>
+</div>
+</section>
+<section id="bloque-ii-experiencia-inv" class="slide level2">
+<h2>Bloque II: experiencia (inv)</h2>
+<ul>
+<li><span class="hl-orange"><strong>Profesor Ayudante Doctor</strong></span> en la UCM (2021-actualmente).</li>
+<li><span class="hl-orange"><strong>Responsable de un artículo 83</strong></span> con la Consejería de Salud del Principado de Aasturias.</li>
+<li><span class="hl-orange"><strong>Profesor Ayudante Doctor</strong></span> en UNIOVI (2020-2021).</li>
+<li><strong>Profesor Laboral de Sustitución</strong> en la UCM (2018-2020).</li>
+<li>Contratado FPI en la UGR (2014-2018).</li>
+</ul>
+</section>
+<section id="bloque-ii-experiencia-inv-1" class="slide level2">
+<h2>Bloque II: experiencia (inv)</h2>
+<ul>
+<li><span class="hl-orange"><strong>Profesor Ayudante Doctor</strong></span> en la UCM (2021-actualmente).</li>
+<li><span class="hl-orange"><strong>Responsable de un artículo 83</strong></span> con la Consejería de Salud del Principado de Aasturias.</li>
+<li><span class="hl-orange"><strong>Profesor Ayudante Doctor</strong></span> en UNIOVI (2020-2021).</li>
+<li><strong>Profesor Laboral de Sustitución</strong> en la UCM (2018-2020).</li>
+<li>Contratado FPI en la UGR (2014-2018).</li>
+</ul>
+<h3 id="acreditaciones">Acreditaciones</h3>
+<ul>
+<li><p><span class="hl-orange"><strong>1 sexenio de investigación</strong></span> concedido (periodo cubierto: 2016 a 2022)</p></li>
+<li><p>Acreditación de <span class="hl-orange"><strong>Contratado Doctor</strong></span> en 2022. Acreditación de <span class="hl-orange"><strong>Ayudante Doctor</strong></span> en 2018</p></li>
+</ul>
+<div class="fragment">
+<p><span class="hl-orange"><strong>Co-director de 2 tesis doctorales</strong></span>: «Problemas de Aprendizaje Automático en Redes y Aplicaciones» y «Dinámica de la recuperación de la sensibilidad al contraste tras el blanqueamiento de los fotorreceptores»</p>
+</div>
+</section>
+<section id="bloque-ii-experiencia-inv-2" class="slide level2">
+<h2>Bloque II: experiencia (inv)</h2>
+<h3 id="becas-premios-y-contratos-competitivos">Becas, premios y contratos competitivos</h3>
+<div>
+<ul>
+<li class="fragment"><p><span class="hl-orange"><strong>Contrato FPI (2014-2018) obtenido en concurso competitivo</strong></span>. Además obtuve dos ayudas competitivas para estancia predoctoral (EEBB-I-15-10244 y EEBB-I-17-1196) para la realización de dos estancias de 3 meses cada una en la Universidad Pierre et Marie Curie (París, 2015 y 2017).</p></li>
+<li class="fragment"><p>La tesis leída el 24 de julio de 2018 obtuvo la <span class="hl-orange"><strong>mención de doctorado internacional y Cum Laude</strong></span></p></li>
+<li class="fragment"><p>Ganador de un <span class="hl-orange"><strong>contratado Juan de la Cierva-Formación</strong></span> (FJC2018-038562-I, convocatoria 2018) en la USC.</p></li>
+<li class="fragment"><p>Nominado como representante la Sociedad Española de Estadística e Investigación Operativa (SEIO) para representarla en el Regional Workshop of European Young Researchers (París, 01/10/2018).</p></li>
+<li class="fragment"><p>Nominado como <span class="hl-orange"><strong>representante la Sociedad Española de Estadística e Investigación Operativa (SEIO) para representarla en el 21th European Young Statisticians Meetings</strong></span> (Serbia, 29/07/2019).</p></li>
+</ul>
+</div>
+</section>
+<section id="bloque-ii-experiencia-inv-3" class="slide level2">
+<h2>Bloque II: experiencia (inv)</h2>
+<h3 id="proyectos-y-grupos-de-investigación">Proyectos y grupos de investigación</h3>
+<div class="smaller-un-poquito-text">
+<ul>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] Miembro del Grupo de Investigación UCM «Bio2DS (Biomedical and biostatistics data science)» (2023-actualidad).</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] Dinámica compleja e inferencia no paramétrica (PID2020-116587GB-I00). Proyecto nacional del Ministerio de Ciencia e Innovación (2020 - 2025). Cuantía total: 258 335 €.</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] Modelos estocásticos espacio-temporales: generalizaciones, inferencia y análisis de riesgos (A-FQM-345-UGR18). Proyecto financiado por la Junta de Andalucía (2020 - 2022). Cuantía total: 34 150 €.</p></li>
+<li><p>[<span style="color:#b49fe8">ec</span>] Campos aleatorios intrínsecos sobre variedades de Riemann (PGC2018-099549-B-I00). Proyecto nacional del Ministerio de Ciencia e Innovación (2019 - 2022). Cuantía total: 26 015 €.</p></li>
+<li><p>[<span style="color:#b49fe8">ec</span>] Funcionales de campos aleatorios: teoría asintótica e inferencia. Proyecto nacional del Ministerio de Ciencia e Innovación (2015-2018). Cuantía total: 30 371 €</p></li>
+<li><p>[<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] Teoremas límite para procesos espacio-temporales e inferencia funcional asintótica con aplicaciones al análisis de cambio climático, microarrays de CDNA y capital financiero. Proyecto nacional del Ministerio de Ciencia e Innovación (2014-2015). Cuantía total: 31 473 €</p></li>
+</ul>
+</div>
+</section>
+<section id="bloque-ii-experiencia-profesional" class="slide level2">
+<h2>Bloque II: experiencia (profesional)</h2>
+<div class="columns">
+<div class="column" style="width:56%;">
+<ul>
+<li><p>Becario analista de datos en <span class="hl-orange"><strong>Línea Directa Aseguradora</strong></span> (01/02/2014 - 31/08/2014). Funciones: análisis de datos con SAS, programación en SAS, migración de SAS a PIG y Hadoop en un <span class="hl-orange"><strong>entorno Big Data y de computación en paralelo</strong></span>.</p></li>
+<li><p>Técnico analista en la startup <span class="hl-orange"><strong>Show Leap</strong></span> (01/03/2014 - 31/08/2014). Funciones: elaboración de <span class="hl-orange"><strong>métodos de predicción, clasificación y reconocimiento de patrones</strong></span> en la creación de un dispositivo de traducción simultánea de Lengua de Signos Española a castellano oral.</p></li>
+<li><p>Becario en <span class="hl-orange"><strong>Everis</strong></span> realizando labores de programación Web en Liferay y Java (01/09/2012 - 01/11/2012).</p></li>
+</ul>
+</div><div class="column" style="width:44%;">
+<p><img data-src="https://www.lineadirectaaseguradora.com/documents/652707/655837/logo-linea-directa-aseguradora-color.jpg.png/282b28e1-5997-99b7-0106-a7d3c73f0451?t=1739890254221.png" width="240"></p>
+<p><img data-src="https://plataformaevia.es/wp-content/uploads/2018/02/showleap-logo-1.png" width="240"></p>
+<p><img data-src="https://appian.com/adobe/dynamicmedia/deliver/dm-aid--5e3c90c1-8968-4350-be87-7847fea30a4c/everis-1.jpg?quality=85&amp;preferwebp=true&amp;width=1200" width="175"></p>
+</div>
+</div>
+</section>
+<section id="bloque-iii-producción-científica" class="slide level2">
+<h2>Bloque III: producción científica</h2>
+<p>En 2018 obtuve el doctorado en Estadística Matemática por la UGR en 2018 con la <strong>tesis titulada «Inference on linear processes in Hilbert and Banach spaces»</strong>.</p>
+<p>&nbsp;</p>
+<div class="fragment">
+<p>La tesis estaba centrada en el desarrollo de <span class="hl-orange"><strong>metodologías de estimación y predicción de series temporales</strong></span> en el caso extremo de datos de alta dimensionalidad, cuando nuestro objeto de estudio no son datos multivariantes sino infinito-dimensionales (funciones)</p>
+<p><img data-src="https://ars.els-cdn.com/content/image/1-s2.0-S0167947324001762-gr001_lrg.jpg" width="750"></p>
+</div>
+</section>
+<section id="bloque-iii-producción-científica-1" class="slide level2">
+<h2>Bloque III: producción científica</h2>
+<p><span class="hl-orange"><strong>1 sexenio de investigación (2016-2022)</strong></span></p>
+<div>
+<ul>
+<li class="fragment"><p><span class="hl-orange"><strong>Análisis de datos funcionales</strong></span>. Técnicas de <span class="hl-purple"><strong>contrastes de bondad de ajuste</strong></span> para datos funcionales.</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Ciencia de datos en biomedicina</strong></span>. Análisis de <span class="hl-purple"><strong>datos composicionales</strong></span> en secuenciación genética, caracterización de pacientes de hipertensión arterial pulmonar, comparativa de <span class="hl-purple"><strong>técnicas de validación en regresión penalizada</strong></span>, análisis de <span class="hl-purple"><strong>datos longitudinales</strong></span> (en colaboración con Sara López-Pintado de la Northeastern University y Elga Esposito de Harvard University).</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Análisis de datos electorales</strong></span>. <span class="hl-purple"><strong>Estimación de resultados electorales</strong></span> en base a las casas encuestadores, análisis de house effects, simulación de reparto de escaños y estudio de los diferentes sistemas de reparto. Difusión y divulgación de las implicaciones en nuestra democracia.</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Producción de software</strong></span>. Paquetes <code>{goffda}</code>, <code>{pollspain}</code> y manuales de <code>R</code>.</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Análisis de grafos, redes urbanas y movilidad</strong></span>. Desarrollo de nuevas métricas de homofilia en grafos, node classification problem, <span class="hl-purple"><strong>análisis de datos de movilidad, evaluación de políticas públicas en movilidad y redes urbanas</strong></span>, métodos de inferencia causal en redes (en colaboración con Esteban Moro de la Northeastern University). Recientemente he comenzado a <span class="hl-orange"><strong>colaborar con investigadores de TRANSYT</strong></span> en el análisis de datos de movilidad.</p></li>
+</ul>
+</div>
+</section>
+<section id="bloque-iii-producción-científica-2" class="slide level2">
+<h2>Bloque III: producción científica</h2>
+<div class="smaller-papers-text">
+<ul>
+<li>«A goodness-of-fit test for functional time series with applications to Ornstein-Uhlenbeck processes» (2025). J. Álvarez Liébana, A. López Pérez, W. González Manteiga, M. Febrero Bande. Computational Statistics &amp; Data Analysis 203 (Q2).</li>
+<li>«A goodness-of-fit test for the functional linear model with functional response» (2021). E. García Portugués, J. Álvarez Liébana, G. Álvarez Pérez, W. González Manteiga. Scand. J. Stat. 48 (Q3).</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="paper1.jpg" width="460"> <img data-src="paper2.jpg" width="280"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://ars.els-cdn.com/content/image/1-s2.0-S0167947324001762-gr002_lrg.jpg" width="590"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="bloque-iii-producción-científica-3" class="slide level2">
+<h2>Bloque III: producción científica</h2>
+<div class="smaller-papers-text">
+<ul>
+<li>«New Advances in Node Classification Problem: feature engineering in Decision Trees». Eduardo Martínez Tena, Javier Álvarez Liébana, Daniel Gómez, Javier Castro. Proceedings of the 16th FLINS Conference on Computational Intelligence in Decision and Control (FLINS-ISKE 2024).</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="image%20(1).png"></p>
+</div><div class="column" style="width:60%;">
+<p><img data-src="propuesta_tabla_flins.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="bloque-iii-producción-científica-4" class="slide level2">
+<h2>Bloque III: producción científica</h2>
+<ul>
+<li><p>«Contrast threshold recovery after bleaching during cone‐mediated mesopic adaptation: The effect of test conditions» (2024). Melisa Remis González, Carolina Moreira Estebaranz, Beatriz Sánchez Gavilán, Javier Álvarez Liébana, Juan Cedrún Sánchez, María Puell. <strong>Acta Ophthalmologica 102 (Q1)</strong>.</p></li>
+<li><p>«Prediction of air pollutants PM10 by ARBX(1) processes» (2019). Javier Álvarez Liébana, María Dolores Ruiz Medina. <strong>Stochastic Environ. Research Risk Assess. 33 (Q1)</strong></p></li>
+</ul>
+<div class="smaller-un-poquito-text">
+<ul>
+<li><p>«A note on strong-consistency of componentwise ARH(1) predictors» (2019). María Dolores Ruiz Medina, Javier Álvarez Liébana. Statist. Probab. Lett. 145 (Q3)</p></li>
+<li><p>«Strongly-consistent autoregressive predictors in abstract Banach spaces» (2019). María Dolores Ruiz Medina, Javier Álvarez Liébana. <strong>J. Multivariate Anal. 170 (Q2)</strong>.</p></li>
+<li><p>«Asymptotic properties of a componentwise ARH(1) plug-in predictor» (2017). Javier Álvarez Liébana, Denis Bosq, María Dolores Ruiz Medina. <strong>J. Multivariate Anal. 155 (Q2)</strong>.</p></li>
+<li><p>«Consistency of the plug-in functional predictor of the Ornstein-Uhlenbeck process in Hilbert and Banach spaces». Javier Álvarez Liébana, Denis Bosq, María Dolores Ruiz Medina. Statist. Probab. Lett. (Q3).</p></li>
+<li><p>«Goodness-of-fit tests for functional linear models based on integrated projections». Eduardo García Portugués, Javier Álvarez Liébana, Gonzalo Álvarez Pérez, Wenceslao González Manteiga. Functional and High-Dimensional Statistics and Related Fields 5. Springer International Publishing, 2020.</p></li>
+</ul>
+</div>
+</section>
+<section id="producción-académica-y-científica" class="slide level2">
+<h2>Producción académica y científica</h2>
+<h3 id="producción-de-software">Producción de software</h3>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Paquete de R <code>{pollspain}</code>: paquete para acceder de manera sencilla a datos electorales de España así como a datos de encuestas, incluido funciones para visualizar y calcular house effects. El paquete también ofrece funciones para el reparto y simulación de escaños y voto.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="pollspain.jpg" width="450"></p>
+</div>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Paquete de R <code>{goffda}</code>: implementación de contrastes de bondad de ajuste para modelos de regresión funcionales, tanto con predictora como con variable objetivo funcional.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="goffda.jpg" width="400"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="congresos" class="slide level2">
+<h2>Congresos</h2>
+<p>He participado como ponente en más de 25 congresos nacionales e internacionales:</p>
+<div class="smaller-text">
+<ul>
+<li><p>«Sesgos, falacias y otras criaturas estadísticas» (2025). VII Congreso de Jóvenes Investigadores de la RSME. <span class="hl-orange"><strong>Ponencia plenaria en congreso nacional</strong></span>.</p></li>
+<li><p>«Predicción del voto electoral en España mediante encuestadoras y variables fundamentales» (2023). XL Congreso Nacional de Estadística e Investigación Operativa. <span class="hl-orange"><strong>Ponencia invitada en congreso nacional</strong></span>.</p></li>
+<li><p>«A goodness-of-fit test for functional time series with applications to diffusion processes» (2022). International Symposium on Nonparametric Statistics. <span class="hl-orange"><strong>Ponencia invitada en congreso internacional</strong></span>.</p></li>
+<li><p>«A goodness-of-fit test for functional time series with applications to diffusion processes» (2021). New Bridges between Mathematics and Data Science. <span class="hl-orange"><strong>Ponencia invitada en congreso internacional</strong></span>.</p></li>
+<li><p>«A goodness-of-fit test for the functional linear model with functional response» (2019). 21st European Young Statisticians Meeting. <span class="hl-orange"><strong>Ponencia invitada en congreso internacional</strong></span>.</p></li>
+<li><p>«Banach-valued multivariate mixed effects model with weakly dependent errors» (2018). 12th Int. Conference of the ERCIM WG. <span class="hl-orange"><strong>Ponencia invitada en congreso internacional</strong></span>.</p></li>
+<li><p>«Strongly-consistent prediction of air pollutants PM10 by high-singular ARBX(1) processes» (2018). 2018 CRoNoS Summer Course and Workshop on Functional Data Analysis (COMPSTAT - CRONOS FDA 18). <span class="hl-orange"><strong>Ponencia invitada en congreso internacional</strong></span>.</p></li>
+<li><p>«On the inference of functional time series» (2018). 1st Regional Workshop of European Young Researchers in Statistics. <span class="hl-orange"><strong>Ponencia invitada en congreso internacional</strong></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="estancias" class="slide level2">
+<h2>Estancias</h2>
+<div class="columns">
+<div class="column" style="width:77%;">
+<ul>
+<li><p><span class="hl-orange"><strong>Estancia predoctoral</strong></span> del 1 de abril al 30 de junio de 2015 (3 meses) en <strong>Universitè Pierre et Marie Curie (París)</strong></p>
+<ul>
+<li>«Consistency of the plug-in functional predictor of the Ornstein–Uhlenbeck process in Hilbert and Banach spaces» (2016). J. Álvarez-Liébana, D. Bosq, M. D. Ruiz-Medina. Statistics &amp; Probability Letters.</li>
+<li>«Asymptotic properties of a component-wise ARH (1) plug-in predictor» (2017). J. Alvarez-Liébana, D. Bosq, M. D. Ruiz-Medina. J. Mult. Anal.</li>
+</ul></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><p><span class="hl-orange"><strong>Estancia predoctoral</strong></span> del 21 de septiembre al 21 de diciembre de 2017 (3 meses) en <strong>Universitè Pierre et Marie Curie (París)</strong></p>
+<ul>
+<li>«Strongly consistent autoregressive predictors in abstract Banach spaces» (2018). M. D. Ruiz-Medina y J. Álvarez-Liébana. J. Mult. Anal.</li>
+<li>«Prediction of air pollutants PM10 by ARBX (1) processes» (2019). J. Álvarez-Liébana y M. D. Ruiz-Medina. Stoch. Environ. Res Risk Assess.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:23%;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Eiffelturm.JPG/330px-Eiffelturm.JPG"></p>
+</div>
+</div>
+</section>
+<section id="estancias-1" class="slide level2">
+<h2>Estancias</h2>
+<div class="columns">
+<div class="column" style="width:77%;">
+<ul>
+<li><p><span class="hl-orange"><strong>Estancia postdoctoral</strong></span> del 27 de noviembre al 27 de octubre de 2018 (1 mes) en la <strong>Universidad de Santiago de Compostela</strong></p>
+<ul>
+<li>«A goodness‐of‐fit test for the functional linear model with functional response» (2021). E. García-Portugués, J. Álvarez-Liébana, G. Álvarez-Pérez, W González-Manteiga, M. Febrero Bande. Scandinavian J. Statistics.</li>
+<li>«A goodness-of-fit test for functional time series with applications to Ornstein-Uhlenbeck processes» (2025). J. Álvarez-Liébana, A López-Pérez, W González-Manteiga, M. Febrero Bande. Comp. Stat. Data Anal.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:23%;">
+<p><img data-src="https://www.turismo.gal/osdam/filestore/7/1/7/6/0_7eef4e67c0cf83d/71760scr_0015f5e21ee4627.jpg" width="200"></p>
+</div>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:77%;">
+<ul>
+<li><p><span class="hl-orange"><strong>Estancia postdoctoral</strong></span> del 4 de mayo al 4 de junio de 2019 (1 mes) en el <strong>Instituto IDIVAL</strong> (Santander).</p></li>
+<li><p><span class="hl-orange"><strong>Estancia postdoctoral</strong></span> del 1 de junio al 15 de agosto de 2024 (2 meses y medio) y <span class="hl-orange"><strong>proximamente en 2025 en Harvard y Northeastern University (Network Science Institute)</strong></span></p></li>
+</ul>
+</div><div class="column" style="width:23%;">
+<p><img data-src="https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_4:3,w_3840,g_auto/f_auto/q_auto/v1/gc-v1/boston/Boston_Faneuil_Hall_and_Quincy_Market_sunset_ss_non-editorial_wdt8xf?_a=BAVAZGE70.png" width="210"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="otros-méritos" class="slide level2">
+<h2>Otros méritos</h2>
+<p>Además de las estancias mencionadas y la beca ERASMUS recibida, algunos otros méritos de investigación relacionados con la <span class="hl-orange"><strong>participación en comités científicos y/o organizadores</strong></span> de congresos:</p>
+<p>&nbsp;</p>
+<ul>
+<li><p><span class="hl-orange"><strong>Comité científico</strong></span> del III Congreso de R y XIV Jornadas de Usuarios de R (2024)</p></li>
+<li><p><span class="hl-orange"><strong>Comité organizador</strong></span> del I Joint Workshop on Functional Data Analysis and Nonparametric (2023)</p></li>
+<li><p><span class="hl-orange"><strong>Comité organizador</strong></span> del 3rd Spanish Young Statisticians and Operational Researchers Meeting (2022).</p></li>
+<li><p><span class="hl-orange"><strong>Comité organizador</strong></span> del III International Workshop on Advances in Functional Data Analysis (2019).</p></li>
+<li><p><span class="hl-orange"><strong>Comité científico</strong></span> del 22nd European Young Statisticians Meeting (2019).</p></li>
+<li><p><span class="hl-orange"><strong>Comité organizador</strong></span> del 1st Spanish Young Statisticians and Operational Researchers Meeting (2017).</p></li>
+<li><p><span class="hl-orange"><strong>Comité científico y organizador</strong></span> del 1st Young Researchers Interdisciplinary Conference (JIFFI) (2017).</p></li>
+</ul>
+</section>
+<section id="otros-méritos-1" class="slide level2">
+<h2>Otros méritos</h2>
+<p>Además de la faceta investigadora y docente he estado implicado en <span class="hl-orange"><strong>proyectos de divulgación</strong></span></p>
+<div>
+<div class="smaller-not-so-text">
+<ul>
+<li class="fragment"><p>Invitado a la mesa redonda <span class="hl-orange"><strong>Innovación docente y divulgación de la Estadística</strong></span> en el XVI Congreso Galego de Estatística e Investigación de Operacións (2023)</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Entrevista en Equipo de Investigación</strong></span> sobre las opciones de éxito de la lotería y el uso de chatgpt para adivinarla (La Sexta, 2023).</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Entrevista en el podcast En las Ondas de Marie</strong></span>, proyecto de divulgación de la Unidad de Cultura Científica e la UCM (UCC+I UCM, 2023).</p></li>
+<li class="fragment"><p>Invitado a la mesa redonda <span class="hl-orange"><strong>«Divulgación en internet y redes sociales»</strong></span> en el Congreso Bienal de la Real Sociedad Matemática Española (2022)</p></li>
+<li class="fragment"><p>Participación en el proyecto «Somos científicos y científicas, ¡sácanos de aquí!» de la <span class="hl-orange"><strong>Fundación Española para la Ciencia y la Tecnología (FECYT)</strong></span> (2022)</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Artículo en The Conversation</strong></span>. «Los matemáticos también jugamos a la lotería, aunque no deberíamos» (The Conversation, 2021).</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Artículo en El País</strong></span>. «Cómo el ataque de Pearl Harbor cambió la estadística de las pruebas diagnósticas» (El País, 2021).</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Entrevista en El País</strong></span>. «Ni gatos ni pasteles: el anestesista y el matemático que arrasan en redes porque ayudan a entender la pandemia» (El País, 2021).</p></li>
+<li class="fragment"><p>Plenario invitado con la charla de divulgación «Estadística en la guerra, tanto en Pearl Harbour como en el desembarco de Normandía» en el congreso del ENEM (2021).</p></li>
+<li class="fragment"><p><span class="hl-orange"><strong>Entrevista en RNE</strong></span> sobre los modelos matemáticos aplicados durante la pandemia de covid (RNE, 2020).</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="otros-méritos-2" class="slide level2">
+<h2>Otros méritos</h2>
+<p>Docente y <span class="hl-orange"><strong>coordinador del curso «Analizando datos, visualizando información, contando historias: introducción al análisis y visualización de datos con R»</strong></span> enmarcado en la Escuela de Invierno de la UCM (2022). Además de <span class="hl-orange"><strong>coordinador de semestre</strong></span> fui <span class="hl-orange"><strong>coordinador del ciclo de conferencias divulgativas</strong></span> de la Facultad de Estudios Estadísticos (UCM) durante el curso 2022-2023.</p>
+<div class="fragment">
+<!-- -->
+<h3 id="transferencia">Transferencia</h3>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Durante la pandemia fui responsable de un <span class="hl-orange"><strong>artículo 83 con la Consejería de Salud del Principado de Asturias (2021-2022)</strong></span> bajo la supervisión de Rafa Cofiño. Las tareas realizadas fueron:</p>
+<ul>
+<li>Implementación en Shiny (R) de la web oficial de indicadores y segumiento de la pandemia del Principado de Asturias.</li>
+<li>Análisis y predicción de la ocupación hospitalaria, y asesoría en el diseño de las campañas de vacunación</li>
+<li>Divulgación y difusión de los datos de pandemia en redes sociales</li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="lavozasturias.jpg" width="275"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="resumen" class="slide level2">
+<h2>Resumen</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/me.jpeg?raw=true"></p>
+</div><div class="column" style="width:75%;">
+<ul>
+<li><p><span class="hl-orange"><strong>Javier Álvarez Liébana</strong></span>, de Carabanchel (Bajo).</p></li>
+<li><p>Licenciado en Matemáticas (2011-2012, UCM). Máster en Ingeniería Matemática (UCM). <span class="hl-orange"><strong>Doctorado en estadística matemática</strong></span> (UGR).</p></li>
+<li><p><span class="hl-orange"><strong>Acreditado como Contratado Doctor (2022)</strong></span> (AD desde 2018).</p></li>
+<li><p><span class="hl-orange"><strong>1 tramo de DOCENTIA</strong></span> con calificación de Excelente (2021-2024) <strong>más de 1800h de docencia</strong> y 20 TFM. <span class="hl-orange"><strong>1 sexenio concedido (2016-2021)</strong></span>.</p></li>
+<li><p>Profesor sustituto (2018-2020, UNIOVI). Profesor Ayudante Doctor (2020-2021, UNIOVI). <span class="hl-orange"><strong>Profesor Ayudante Doctor (2021-actual, UCM)</strong></span>.</p></li>
+</ul>
+</div>
+</div>
+<ul>
+<li><p>Responsable de un <span class="hl-orange"><strong>artículo 83 con la Consejería de Salud del Principado de Asturias (2021-2022)</strong></span>. Formador en estadística y software en el <span class="hl-orange"><strong>Ayto de Madrid (2023), RTVE (2023-2025) e ISCIII (2025)</strong></span></p></li>
+<li><p>Estancias predoctorales en la UPMC de París (6 meses). <strong>Estancias postdoctorales en la USC</strong> (1 mes y medio) y <span class="hl-orange"><strong>Harvard/ Northeastern University</strong></span> (4 meses y medio en total, 2024 y 2025)</p></li>
+<li><p>Miembro de las comisiones de divulgación de la <span class="hl-orange"><strong>Sociedad Española de Estadística e IO</strong></span> y la <span class="hl-orange"><strong>Real Sociedad Matemática Española</strong></span>.</p></li>
+</ul>
+</section>
+<section id="muchísimas-gracias" class="title-slide slide level1 center">
+<h1>MUCHÍSIMAS GRACIAS</h1>
+<div class="footer footer-default">
+<p><a href="..."><strong>Javier Álvarez Liébana</strong></a> • Concurso de plaza Ayudante Doctor en la UPM</p>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="DIA_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="DIA_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="DIA_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="DIA_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"normal"},
+'chalkboard': {"buttons":true},
+'multiplex': {"secret":"17494681278207127555","id":"6b8ad61b5e5a110a","url":"https://reveal-multiplex.glitch.me/"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1110,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiado");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiado");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

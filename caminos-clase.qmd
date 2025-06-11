@@ -1,0 +1,2275 @@
+---
+title: "Concurso de plaza de Ayudante Doctor"
+subtitle: "Exposición docente de Javier Álvarez Liébana"
+author: "Departamento de Matemática e Informática aplicadas a las Ingenierías Civil y Naval"
+lang: es
+format: 
+  revealjs:
+    embed-resources: true
+    theme: [default, style2.scss]
+    menu:
+      side: left
+      width: normal
+    footer: "[<strong>Javier Álvarez Liébana</strong>](...) • Concurso de plaza Ayudante Doctor en la UPM"
+    slide-number: c/t
+    width: 1120
+execute:
+  echo: true
+---
+
+## Concurso de plaza
+
+![](exposicion-docente.jpg){width=200px}
+
+[**Exposición docente**]{.hl-orange}: 
+
+  - Adecuación a la lección al perfil de la plaza
+  - Claridad en la explicación
+  - Adaptación al tiempo disponible
+  - Respuesta a las dudas y cuestiones del tribunal 
+ 
+---
+
+## Asignaturas del perfil
+
+::: {.smaller-un-poquito-text}
+
+:::: columns
+::: {.column width="33%"}
+
+#### Informática
+
+* Entorno de Computación
+* Generación de vectores y matrices. Operaciones con tablas
+* Bifurcaciones y bucles
+* Funciones definidas por el usuario
+* Entrada y salida de datos
+* Herramientas de Visualización
+* Matrices y Sistemas Lineales. Normas matriciales
+
+:::
+
+::: {.column width="33%"}
+
+#### Ciencia de datos
+
+* Entrenamiento, validación y sobreajuste de máquinas para clasificación, regresión y predicción. Entrenamiento supervisado y no supervisado
+* Redes neuronales artificiales
+* Interpretación y análisis de la sensibilidad
+* Técnicas de visualización de resultados
+
+:::
+
+::: {.column width="33%"}
+
+#### Estadística computacional
+
+* Modelos de probabilidad (discretos/continuos)
+* Análisis de la varianza
+* Modelos de regresión y clasificación
+* Modelos para reducir la dimensionalidad: Componentes principales y regresión de mínimos cuadrados parciales
+* Series temporales. Modelos ARIMA
+* Métodos de Montecarlo
+
+
+:::
+
+::::
+:::
+
+---
+
+## Asignaturas del perfil
+
+::: {.smaller-un-poquito-text}
+
+:::: columns
+::: {.column width="33%"}
+
+#### Informática
+
+* Entorno de Computación
+* <span style="color:#f39b4f">Generación de vectores y matrices. Operaciones con tablas</span>
+* Bifurcaciones y bucles
+* Funciones definidas por el usuario
+* <span style="color:#f39b4f">Entrada y salida de datos</span>
+* <span style="color:#f39b4f">Herramientas de Visualización</span>
+* <span style="color:#f39b4f">Matrices y Sistemas Lineales. Normas matriciales</span>
+
+:::
+
+::: {.column width="33%"}
+
+#### Ciencia de datos
+
+* <span style="color:#f39b4f">Entrenamiento, validación y sobreajuste de máquinas para clasificación, regresión y predicción. Entrenamiento supervisado</span> y no supervisado
+* Redes neuronales artificiales
+* Interpretación y análisis de la sensibilidad
+* <span style="color:#f39b4f">Técnicas de visualización de resultados</span>
+
+:::
+
+::: {.column width="33%"}
+
+#### Estadística computacional
+
+* <span style="color:#f39b4f">Modelos de probabilidad (discretos/continuos)</span>
+* <span style="color:#f39b4f">Análisis de la varianza</span>
+* <span style="color:#f39b4f">Modelos de regresión</span> y clasificación
+* Modelos para reducir la dimensionalidad: Componentes principales y regresión de mínimos cuadrados parciales
+* Series temporales. Modelos ARIMA
+* <span style="color:#f39b4f">Métodos de Montecarlo</span>
+
+
+:::
+
+::::
+:::
+
+Realizaré una exposición docente en torno a [**modelos lineales supervisados**]{.hl-orange}
+
+
+---
+
+## Material docente
+
+
+
+* Estas diapositivas se han elaborado integramente con [**Quarto**]{.hl-orange}, una herramienta de Posit (antiguo RStudio) tremendamente potente para **comunicar y combinar textos, fórmulas, imágenes, gráficos y código** (admite código R, Python, Matlab, C, etc)
+
+::: {.fragment}
+
+* Se ha optado por el [**uso de R para el código**]{.hl-orange} cuyas cajas los alumnos pueden copiar y pegar
+
+```{r}
+x <- 1
+x
+```
+
+:::
+
+::: {.fragment}
+
+* El [**código de las diapositivas**]{.hl-orange} se encuentran disponibles libremente en Github y en el contenido se puede seguir en el [**enlace**]{.hl-orange} <https://javieralvarezliebana.es/exposicion-docente-caminos.html>
+
+:::
+
+::: {.smaller-not-so-text}
+
+::: {.fragment}
+
+📚 Alguna bibliografía básica:
+
+[1] «The elements of Statistical Learning» (Hastie et al., 2008)
+
+[2] «Regression And Other Stories» (Gelman, Hill and Vehtari, 2020).
+
+[3] «Elements of Statistical Learning» (John Ross Quinlan, 1986).
+
+[4] «Mathematical Statistics and Data Analysis» (John A. Rice, 2010).
+
+:::
+:::
+
+---
+
+## Objetivos
+
+::: columns
+::: {.column width="20%"}
+![](https://assets-global.website-files.com/6092cb6b4ac959f39728dd26/6188a97fa499b5fbfe410417_target%20(1).png){width=230px}
+
+:::
+
+::: {.column width="80%"}
+::: incremental
+- [**Relacionar competencias**]{.hl-orange} de probabilidad, modelización lineal, simulación, inferencia estadística, programación y visualización de datos.
+
+- Aprender los fundamentos del [**aprendizaje estadístico**]{.hl-orange}
+
+- Pasar de los descriptivo a lo predictivo: [**construir nuestros primeros modelos (lineales)**]{.hl-orange}
+
+- Entender en profundidad el contexto de la [**predicción lineal**]{.hl-orange}.
+
+
+:::
+:::
+:::
+
+
+::: {.fragment}
+
+### Requisitos
+
+1.  [**Conexión a internet**]{.hl-orange} (para la descarga de algunos datos y paquetes).
+
+2.  [**Instalar R y RStudio**]{.hl-orange}: la descarga la haremos (gratuitamente) desde <https://cran.r-project.org/> y  <https://posit.co/download/rstudio-desktop/>
+
+3. Tener cursadas asignaturas básica de estadística y probabilidad, geometría y álgebra.
+
+:::
+
+---
+
+
+## ¿Qué es predecir?
+
+En esta asignatura vamos a tratar principalmente lo que se conoce en el aprendizaje estadístico como [**predicción (continua)**]{.hl-orange}. Dada una [**variable objetivo (variable dependiente)**]{.hl-orange}, y con la información aportada por un conjunto de [**variables predictoras (covariables)**]{.hl-orange}, el objetivo será obtener una estimación/predicción lo «mejor posible» haciendo uso de un
+
+. . .
+
+&nbsp;
+
+
+[**modelo de APRENDIZAJE**]{.hl-orange} [**SUPERVISADO**]{.hl-blue} de [**PREDICCIÓN**]{.hl-purple} [**LINEAL**]{.hl-green} (conocido como regresión lineal)
+
+
+---
+
+
+## ¿Modelo de aprendizaje?
+
+
+[**modelo de APRENDIZAJE**]{.hl-orange} supervisado de predicción lineal
+
+&nbsp;
+
+:::: columns
+::: {.column width="40%"}
+
+En esta asignatura veremos el modelo más simple de lo que se conoce como [**aprendizaje estadístico (Machine Learning)**]{.hl-orange}: modelos que, tras un número de iteraciones, son capaces de «aprender» de los datos (en realidad es un proceso de optimización que hemos «humanizado»)
+
+:::
+
+::: {.column width="60%"}
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/ml.jpg?raw=true)
+
+:::
+::::
+
+
+---
+
+
+## ¿Supervisado?
+
+En el campo del Machine Learning hay principalmente dos tipos de modelos:
+
+:::: columns
+::: {.column width="50%"}
+
+* [**Aprendizaje supervisado**]{.hl-blue}: tendremos dos tipos de variables, la [**variable dependiente (output)**]{.hl-orange} que se quiere predecir/clasificar, normalmente denotada como $Y$, y las [**variables independientes o predictoras**]{.hl-orange}, que contienen la información disponible. Ejemplos: regresión, knn, árboles, etc.
+ 
+
+:::
+
+::: {.column width="50%"}
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/supervised.jpg?raw=true)
+
+:::
+::::
+
+::: {.fragment}
+
+:::: columns
+::: {.column width="50%"}
+
+* [**Aprendizaje no supervisado**]{.hl-blue}: no existe la distinción entre target y variables explicativas ya que [**no tenemos etiquetados los datos**]{.hl-orange}, no sabemos a priori la respuesta correcta. El aprendizaje no supervisado [**buscará patrones**]{.hl-orange} basados en similitudes/diferencias. Ejemplos: PCA, clustering, redes neuronales, etc.
+
+:::
+
+
+::: {.column width="50%"}
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/unsupervised.jpg?raw=true)
+
+:::
+::::
+
+:::
+
+---
+
+
+## ¿Predicción?
+
+modelo de aprendizaje supervisado de [**PREDICCIÓN**]{.hl-purple} lineal
+
+&nbsp;
+
+La **regresión lineal** se enmarca dentro de la [**predicción**]{.hl-purple} supervisada
+
+:::: columns
+::: {.column width="50%"}
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/vitro-fuego-discretas.jpg?raw=true)
+
+:::
+
+::: {.column width="50%"}
+
+* [**Predicción**]{.hl-purple}: la [**variable objetivo es una variable cuantitativa continua**]{.hl-purple} (por ejemplo, precio, glucosa, peso, temperatura, volumen, etc).
+
+* [**Clasificación**]{.hl-purple}: la [**variable objetivo es una variable cualitativa**]{.hl-purple} (por ejemplo, categoría, ausencia/presencia de enfermedad, si/no, etc) o **cuantitativa discreta** (por ejemplo, nº de personas), pudiendo ser **binaria** (si/no) o **multiclase** (A, B, C, D).
+
+:::
+::::
+
+
+---
+
+## ¿Lineal?
+
+
+modelo de aprendizaje supervisado de predicción [**LINEAL**]{.hl-green}
+
+&nbsp;
+
+En matemáticas decimos que una función $f(x)$ es [**lineal**]{.hl-green} cuando se cumple:
+
+* [**Propiedad aditiva**]{.hl-green}: $f(x + y) = f(x) + f(y)$
+
+* [**Propiedad homogénea**]{.hl-green}: $f(k*x) = k*f(x)$ (donde $k$ es una constante en $\mathbb{R}$).
+
+Ambas se pueden resumir en $f(a*x + b*y) = a*f(x) + b*f(y)$
+
+. . .
+
+Llamaremos [**modelo de predicción lineal**]{.hl-green} a un modelo que usa la información de covariables $X_1, X_2, \ldots, X_p$, de manera que su información siempre [**se relacionen entre sí con sumas y restas**]{.hl-orange}.
+
+- [**Ejemplos lineales**]{.hl-green}: $y = 2*x_1 - 3$ o  $y = 4 - \frac{x_1}{2} + 3*x_2$
+
+- [**Ejemplos no lineales**]{.hl-red}: $y = 2*\frac{1}{x_1}$ o  $y = 4 - x_{1}^{2} - x_2$ o $y = ln(x_1) + cos(x_2)$
+
+
+
+---
+
+
+## Modelo de regresión lineal
+
+El [**modelo teórico de predicción lineal**]{.hl-orange} se basa en:
+
+$$Y = f \left(X_1, \ldots, X_p \right) + \varepsilon = \beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p  + \varepsilon$$
+
+::: {.fragment}
+
+:::: columns
+::: {.column width="60%"}
+
+Supongamos por ejemplo que queremos estimar $Y = peso$ en función de $X_1 = estatura$ y $X_2 = edad$, tal que $peso = \beta_0 + \beta_1*estatura + \beta_2* edad + \varepsilon$
+
+:::
+
+::: {.column width="40%"}
+
+```{r}
+#| echo: false
+library(dplyr)
+starwars |> 
+  select(name, height, mass, birth_year) |> 
+  rename(age = birth_year) |> 
+  slice(1:4)
+```
+
+:::
+::::
+
+:::
+
+::: incremental
+
+* ¿Por qué es un [**modelo de aprendizaje**]{.hl-orange}? Porque con la info de $\left(X_1, \ldots, X_p \right)$  que se le vaya proporcionando irá ajustando su estimación de $Y$  (que denotaremos como $\widehat{Y}$)
+
+* ¿Por qué [**supervisado**]{.hl-blue}? Porque de cada individuo conozco el valor real de $Y$ (y una vez obtenida la estimación $\widehat{Y}$ podré supervisar lo que me equivoco)
+
+* ¿Por qué [**predicción**]{.hl-purple}? Porque $Y$ es una variable continua
+
+* ¿Por qué [**lineal**]{.hl-green}? Porque estatura y edad solo les acompañan constantes y sumas/restas: no se multiplican/dividen entre sí, no hay logaritmo, seno, coseno, etc.
+
+
+:::
+
+---
+
+## Modelo de regresión lineal
+
+$$Y = f \left(X_1, \ldots, X_p \right) + \varepsilon = \beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p  + \varepsilon$$
+
+
+* $\mathbf{X} = \left(X_1, \ldots, X_p \right)$ serán los [**datos**]{.hl-orange}, nuestras variables predictoras.
+
+* $f(\cdot)$ será nuestro [**modelo**]{.hl-orange} (con la información $\mathbf{X}$), en este caso, recta o hiperplano lineal.
+
+* $\varepsilon$ será el [**error o ruido**]{.hl-orange}, una [**variable aleatoria de media 0**]{.hl-orange}: aleatorio y desconocido, lo que no podemos controlar (si no existiese ese error -> asignatura de análisis)
+
+::: incremental
+
+
+* El modelo lineal solo busca [**modelizar la parte determinística**]{.hl-orange}, es decir, busca modelizar $E \left[Y | \boldsymbol{X} \right]$ como $\beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p$ (la media del error es nula)
+
+* Esa esperanza es el valor téorico suponiendo que [**conociésemos la población entera**]{.hl-orange} (por ejemplo, conocer la estatura y edad de TODA la población). [**¿Es eso posible?**]{.hl-red}
+
+:::
+
+---
+
+## Muestra vs población
+
+-   [**Población**]{.hl-orange}
+
+La población es el [**conjunto completo de elementos o individuos**]{.hl-orange}. En algunos casos es posible acceder a ella (mediante **censos**) pero la mayoría de casos el [**acceso a la totalidad de la población es inviable**]{.hl-orange} por motivos económicos, legales o éticos.
+
+&nbsp;
+
+. . .
+
+
+- [**Muestra**]{.hl-orange}: subconjunto de tamaño $n$ de la población que se selecciona para su análisis, con el fin de hacer generalizaciones (inferencia) sobre la población completa, a través de **encuestas, experimentos, observaciones, registros**, etc. 
+
+  -   **Muestreo aleatorio simple**: cada individuo tiene la misma probabilidad de ser seleccionado.
+  -   **Muestreo estratificado**: la población se divide en subgrupos (estratos) y se toma una muestra de cada uno (por ejemplo, mismo % por sexos).
+  -   **Otros**: muestreo (no aleatorio) por cuotas, muestreo por conveniencia, etc.
+
+---
+
+## Muestra vs población
+
+La rama de la estadística dedicada a ello se conoce como [**muestreo**]{.hl-orange}, y aunque no es el objetivo de esta asignatura, es fundamental reflexionar sobre cómo se han recopilado los datos.
+
+![](https://sketchplanations.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fsketchplanations%2Ff2fdb7cb-f126-4897-ad78-4fd11c743172_SP%2B723%2B-%2BSampling%2Bbias.png%3Fauto%3Dcompress%2Cformat&w=828&q=75)
+
+[**Sesgo de selección**]{.hl-orange}: aparece cuando no se tiene en cuenta la forma en la que se han recogido los datos.
+
+---
+
+
+## Modelo muestral
+
+:::: columns
+::: {.column width="48.5%"}
+
+#### Teórico (poblacional)
+
+::: {.smaller-papers-text}
+
+
+$$Y = \beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p  + \varepsilon$$
+
+$$ $$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $X_1, \ldots, X_p$ [**predictoras (aleatorias)**]{.hl-orange}: estatura y edad de TODA la población.
+
+* $Y$ [**objetivo (aleatoria)**]{.hl-orange}: peso de TODA la población.
+
+
+:::
+
+:::
+
+::: {.column width="3%"}
+
+:::
+
+::: {.column width="48.5%"}
+
+#### Muestral
+
+::: {.smaller-papers-text}
+
+$$y_i = \beta_0 + \beta_1 x_{i1} + \ldots + \beta_p x_{ip}  + \varepsilon_i \quad \text{teórico}$$
+
+$$\widehat{y}_i = \widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} + \ldots + \widehat{\beta}_p x_{ip} \quad \text{estimado}$$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $\left(x_{i1}, \ldots, x_{ip}\right)$ son [**datos en una tabla**]{.hl-orange} para el individuo i-ésimo: estatura y edad del individuo i.
+* $y_i$ es el [**valor OBSERVADO**]{.hl-orange}: peso del individuo i.
+
+
+:::
+:::
+
+::::
+
+
+---
+
+
+## Modelo muestral
+
+:::: columns
+::: {.column width="48.5%"}
+
+#### Teórico (poblacional)
+
+::: {.smaller-papers-text}
+
+
+$$Y = \beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p  + \varepsilon$$
+
+$$ $$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $X_1, \ldots, X_p$ predictoras (aleatorias): estatura y edad de TODA la población.
+
+* $Y$ objetivo (aleatoria): peso de TODA la población.
+
+* $\left(\beta_0, \ldots, \beta_p \right)$ [**fijas**]{.hl-orange} pero desconocidas.
+
+
+:::
+
+:::
+
+::: {.column width="3%"}
+
+:::
+
+::: {.column width="48.5%"}
+
+#### Muestral
+
+::: {.smaller-papers-text}
+
+$$y_i = \beta_0 + \beta_1 x_{i1} + \ldots + \beta_p x_{ip}  + \varepsilon_i \quad \text{teórico}$$
+
+$$\widehat{y}_i = \widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} + \ldots + \widehat{\beta}_p x_{ip} \quad \text{estimado}$$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $\left(x_{i1}, \ldots, x_{ip}\right)$ son datos en una tabla  para el individuo i-ésimo: estatura y edad del individuo i.
+* $y_i$ es el valor OBSERVADO: peso del individuo i.
+
+* $\left(\widehat{\beta}_0, \ldots, \widehat{\beta}_p\right)$ [**variables aleatorias**]{.hl-orange} (dependen de la muestra).
+
+
+:::
+:::
+
+::::
+
+
+---
+
+
+## Modelo muestral
+
+:::: columns
+::: {.column width="48.5%"}
+
+#### Teórico (poblacional)
+
+::: {.smaller-papers-text}
+
+
+$$Y = \beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p  + \varepsilon$$
+
+$$ $$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $X_1, \ldots, X_p$ predictoras (aleatorias): estatura y edad de TODA la población.
+
+* $Y$ objetivo (aleatoria): peso de TODA la población.
+
+* $\left(\beta_0, \ldots, \beta_p \right)$ fijas pero desconocidas.
+
+* $\beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p$ [**modelo teórico que pretende explicar el valor promedio**]{.hl-orange} de $Y$ con la info disponible de $X$ ($E[Y|X]$): posible relación biológica entre estatura, peso y edad (en promedio).
+
+
+:::
+
+:::
+
+::: {.column width="3%"}
+
+:::
+
+::: {.column width="48.5%"}
+
+#### Muestral
+
+::: {.smaller-papers-text}
+
+$$y_i = \beta_0 + \beta_1 x_{i1} + \ldots + \beta_p x_{ip}  + \varepsilon_i \quad \text{teórico}$$
+
+$$\widehat{y}_i = \widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} + \ldots + \widehat{\beta}_p x_{ip} \quad \text{estimado}$$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $\left(x_{i1}, \ldots, x_{ip}\right)$ son datos en una tabla para el individuo i-ésimo: estatura y edad del individuo i.
+
+* $y_i$ es el valor OBSERVADO: peso del individuo i.
+
+* $\left(\widehat{\beta}_0, \ldots, \widehat{\beta}_p\right)$ variables aleatorias (dependen de la muestra).
+
+* $\widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} + \ldots + \widehat{\beta}_p x_{ip}$ la [**estimación que hacemos del modelo real**]{.hl-orange} con la información de la muestra. 
+
+
+:::
+:::
+
+::::
+
+
+---
+
+## Modelo muestral
+
+:::: columns
+::: {.column width="48.5%"}
+
+#### Teórico (poblacional)
+
+::: {.smaller-papers-text}
+
+
+$$Y = \beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p  + \varepsilon$$
+
+$$ $$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $X_1, \ldots, X_p$ predictoras (aleatorias): estatura y edad de TODA la población.
+
+* $Y$ objetivo (aleatoria): peso de TODA la población.
+
+* $\left(\beta_0, \ldots, \beta_p \right)$ fijas pero desconocidas.
+
+* $\beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p$ modelo teórico que pretende explicar el valor promedio de $Y$ con la info disponible de $X$ ($E[Y|X]$): posible relación biológica entre estatura, peso y edad (en promedio).
+
+* $\varepsilon$ [**variable aleatoria**]{.hl-orange} entendida como la [**desviación individual**]{.hl-orange} del peso de cada persona respecto a esa media teórica (variabilidad genética) cuyo promedio es nulo  $E[\varepsilon|X] = 0$.
+
+:::
+
+:::
+
+::: {.column width="3%"}
+
+:::
+
+::: {.column width="48.5%"}
+
+#### Muestral
+
+::: {.smaller-papers-text}
+
+$$y_i = \beta_0 + \beta_1 x_{i1} + \ldots + \beta_p x_{ip}  + \varepsilon_i \quad \text{teórico}$$
+
+$$\widehat{y}_i = \widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} + \ldots + \widehat{\beta}_p x_{ip} \quad \text{estimado}$$
+
+:::
+
+::: {.smaller-muestra-poblacion-text}
+
+* $\left(x_{i1}, \ldots, x_{ip}\right)$ son datos en una tabla para el individuo i-ésimo: estatura y edad del individuo i.
+* $y_i$ es el valor OBSERVADO: peso del individuo i.
+
+* $\left(\widehat{\beta}_0, \ldots, \widehat{\beta}_p\right)$ variables aleatorias (dependen de la muestra).
+
+* $\widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} + \ldots + \widehat{\beta}_p x_{ip}$ la estimación que hacemos del modelo real con la información de la muestra. 
+
+* $\varepsilon_i$ error que conoceríamos si supiésemos el valor real de $\left(\beta_0, \ldots, \beta_p \right)$. Si solo conocemos sus [**estimaciones muestrales**]{.hl-orange} tendremos una desviación estimada $\widehat{\varepsilon}_i$, con media muestral nula.
+
+:::
+:::
+
+::::
+
+
+
+---
+
+## Modelo muestral
+
+
+Si queremos predecir peso en función de estatura y edad ($p = 2$) de $n=5$ individuos
+
+
+```{r}
+#| code-fold: true
+library(dplyr)
+starwars |> 
+  select(name, height, mass, birth_year) |> 
+  rename(age = birth_year) |> 
+  slice(1:5)
+```
+
+::: incremental
+
+* $x_{i1}$ es 172cm en el caso de Luke Skywalker ($i = 1$) y 96cm en el caso de R2-D2 ($i = 3$)
+* $x_{i2}$ es 41.9 años en el caso de Darth Vader ($i = 4$) y 112 años en el caso de C-3PO ($i = 2$)
+* $y_{i}$ es 77kg en el caso de Luke Skywalker ($i = 1$) y 49kg en el caso de Leia Organa ($i = 5$)
+
+:::
+
+. . .
+
+¿Objetivo? Con la [**info de la muestra**]{.hl-orange} (representativa) ser capaces de [**entrenar un modelo**]{.hl-orange} (en este caso, obtener los «mejores» $\left(\widehat{\beta}_0, \widehat{\beta}_1, \widehat{\beta}_2\right)$ que podamos luego [**extrapolar (INFERIR)**]{.hl-orange} a toda la población (para usarlo con un individuo nuevo que no tengamos en la muestra)
+
+
+---
+
+## Modelo de regresión lineal
+
+:::: columns
+::: {.column width="40%"}
+
+#### Teórico (poblacional)
+
+$$Y = \beta_0 + \beta_1 X_1 + \ldots + \beta_p X_p  + \varepsilon$$
+
+:::
+
+::: {.column width="4%"}
+
+:::
+
+::: {.column width="56%"}
+
+#### Muestral
+
+$$y_i = \beta_0 + \beta_1 x_{i1} + \ldots + \beta_p x_{ip}  + \varepsilon_i$$
+
+
+:::
+
+::::
+
+
+El anterior [**modelo de regresión lineal es parámetrico**]{.hl-orange}: para estimar el valor de $y$ basta con proporcionar una [**estimación de los parámetros**]{.hl-orange} 
+
+::: {.fragment}
+
+$$\widehat{y}_i = \widehat{\beta}_0 +  \widehat{\beta}_1 x_{i1} + \ldots +  \widehat{\beta}_p x_{ip},  \quad \left( \widehat{\beta}_0, \ldots,  \widehat{\beta}_p \right) \quad \text{variables aleatorias}$$
+
+:::
+
+::: {.fragment}
+
+$$\widehat{\varepsilon}_i =  \widehat{y}_i - y_i = \left(\widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} + \ldots + \widehat{\beta}_p x_{ip} \right) - y_i = \text{estimación} - \text{realidad}$$
+
+
+:::
+
+&nbsp;
+
+::: {.fragment}
+
+Buscamos un [**modelo basado en $X$ que explique al máximo lo que sucede en $Y$**]{.hl-orange}, es decir, buscamos un modelo donde el residuo $\widehat{\varepsilon}$ [**contenga la MENOR INFORMACIÓN posible**]{.hl-orange}
+
+:::
+
+---
+
+## Regresión univariante
+
+Vamos a simplificar aún más la idea empezando con la [**regresión univariante**]{.hl-orange} (solo $p = 1$)
+
+```{r}
+#| echo: false
+library(dplyr)
+starwars |> 
+  select(name, height, mass) |>
+  slice(1:5)
+```
+
+¿Cómo predecir el peso ($Y$) a través de la estatura ($X$)?
+
+. . .
+
+
+$$Y = \beta_0 + \beta_1 X_1 + \varepsilon, \quad y_i = \beta_0 + \beta_1 x_{i1}  + \varepsilon_i,  \quad \widehat{y}_i = \widehat{\beta}_0 + \widehat{\beta}_1 x_{i1}$$
+
+
+
+* $x_{i1}$ estatura del individuo i-ésimo. $y_i$ peso del individuo i-ésimo
+* $\widehat{y}_i$ estimación del peso del individuo i-ésimo
+* El modelo $\beta_0 + \beta_1 X_1$ representa lo que se conoce como [**recta de regresión**]{.hl-orange}: la recta que modeliza la relación determinística entre $Y$ y $X$ (más allá de las desvaciones aleatorias)
+* $\widehat{\beta}_0 + \widehat{\beta}_1 X_1$ representa la recta de regresión estimada
+
+---
+
+## Regresión univariante
+
+
+```{r}
+#| code-fold: true
+library(dplyr)
+starwars |> 
+  select(name, height, mass) |>
+  slice(1:5)
+```
+
+
+$$Y = \beta_0 + \beta_1 X_1 + \varepsilon, \quad y_i = \beta_0 + \beta_1 x_{i1}  + \varepsilon_i, \quad \widehat{y}_i = \widehat{\beta}_0 + \widehat{\beta}_1 x_{i1}$$
+
+Si la recta de regresión se estima como $\widehat{\beta}_0 = -70$ y $\widehat{\beta}_1 = 0.87$. [**¿Cuál es la estimación?**]{.hl-orange}
+
+. . .
+
+$$\widehat{y}_i = \widehat{\beta}_0 + \widehat{\beta}_1 x_{i1} = -70 + 0.87*\text{estatura}_i$$
+
+. . .
+
+Por ejemplo, para Luke Skywalker, la predicción del peso según el modelo es de $\widehat{y}_i = 79.64kg$ mientras que su peso real es de $y_i = 77kg$, por lo que la estimación del error es $\widehat{\varepsilon}_i = 2.64$
+
+
+---
+
+## ¿Por qué regresión?
+
+> Hay una regla universal: cualquier pariente tuyo es probablemente más mediocre que tú»
+
+La [**historia de la recta regresión**]{.hl-orange} se remonta a **Francis Galton**, primo de Charles Darwin, fascinado por «El origen de la especies»: [**Galton no se centraba en los mejor adaptados sino en los que él llama mediocres**]{.hl-orange}. Según él las sociedades estaban fomentando la mediocridad  así que empezó a estudiar la [**relación de la estatura de los hijos respecto a los padres**]{.hl-orange}
+
+. . .
+
+En 1886 publicó «Regression towards mediocrity in hereditary stature», un artículo que cambiaría la estadística: fue el [**primer uso documentado de la recta de regresión**]{.hl-orange} 
+
+. . .
+
+:::: columns
+::: {.column width="30%"}
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/reg_dalton.jpg?raw=true)
+
+:::
+
+::: {.column width="70%"}
+
+Galton analizó la estatura de 205 hijos y padres, observando que, de nuevo, los valores extremos se disipaban: a lo largo de las generaciones había una [**REGRESIÓN (un retroceso) a la mediocridad (entendida como la media)**]{.hl-orange} 
+
+
+:::
+::::
+
+Hijos de altos eran algo más bajitos, e hijos de bajitos eran algo más altos.
+
+---
+
+## ¿Por qué regresión?
+
+:::: columns
+::: {.column width="60%"}
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/reg-galton-coef.jpg?raw=true)
+
+:::
+
+::: {.column width="40%"}
+
+Galton no solo observó que las [**estaturas «regresaban» a un valor medio sino que lo hacían con un patrón**]{.hl-orange}, con un factor constante de $2/3$: si los padres se desviaban $+3$ por encima de la media, los hijos se desviaban solo $(2/3)*3 = +2$ por encima de la media.
+
+:::
+::::
+
+---
+
+## ¿Cómo determinar la recta?
+
+Ya sabemos que si tenemos una variable $Y$ que queremos explicar en función $X$, el modelo lineal (regresión univariante) nos dice que basta con encontrar una **estimación de los parámetros de la recta**. ¿Pero... [**cuál de todas las rectas posibles**]{.hl-orange}?
+
+. . .
+
+:::: columns
+::: {.column width="40%"}
+
+El modelo más sencillo sería una **recta horizontal** representada por el modelo trivial $\widehat{y} = \widehat{\beta}_0 = \bar{y} = cte$, un modelo que [**no aprende**]{.hl-red} ya que no incorpora información de $X$.
+
+:::
+
+::: {.column width="60%"}
+
+```{r}
+#| echo: false
+#| fig-width: 8
+datos <-
+  starwars |> 
+  select(name, height, mass) |>
+  slice(c(1:15, 17:20)) |> 
+  mutate("pred" = mean(mass, na.rm = TRUE))
+library(ggplot2)
+
+ggplot(datos, aes(x = height, y = mass)) +
+  geom_segment(aes(xend = height, y = pred, yend = mass),
+               color = "pink", size = 1) +
+  geom_point(color = "orange", size = 4) +
+  geom_hline(aes(yintercept = pred), color = "black", size = 1.5) +
+  labs(x = "estatura (cm)", y = "peso (kg)") +
+  theme_minimal()
+```
+
+:::
+::::
+
+---
+
+
+## ¿Cómo determinar la recta?
+
+¿[**Cuál de todas las rectas posibles**]{.hl-orange}?
+
+:::: columns
+::: {.column width="70%"}
+
+![](pendiente_con_barras.gif)
+
+:::
+
+::: {.column width="30%"}
+
+El objetivo será [**explicar el máximo de información (variabilidad) de Y con la información de X**]{.hl-orange}, o lo que es lo mismo, que [**minimice la información que queda sin explicar**]{.hl-orange}: buscamos la recta que, en promedio, minimice las distancias verticales (al cuadrado).
+
+
+:::
+::::
+
+
+---
+
+## Varianza residual
+
+El objetivo será [**explicar el máximo de información (variabilidad) de Y con la información de X**]{.hl-orange}, o lo que es lo mismo, que [**minimice la información que queda sin explicar**]{.hl-orange}
+
+
+* La información sin explicar viene capturada en el error estimado $\widehat{\varepsilon}$ (modelo - realidad)
+* [**Información en estadística = varianza**]{.hl-orange}
+
+
+. . .
+
+De todas las rectas posibles nos quedaremos con la que [**minimice la varianza (muestral) del error**]{.hl-orange} (varianza residual muestral), que se define como sigue (ya que su media es cero)
+
+
+$$s_{r}^{2} = \frac{1}{n} \displaystyle \sum_{i=1}^{n} \widehat{\varepsilon}_{i}^{2} =  \frac{1}{n} \sum_{i=1}^{n} \left(Y_i - \widehat{Y}_i \right)^2 = \frac{1}{n} \sum_{i=1}^{n} \left[Y_i - \left(\widehat{\beta}_0 + \widehat{\beta}_1X_i \right)\right]^2$$
+
+---
+
+## Varianza residual
+
+$$s_{r}^{2} = \frac{1}{n} \displaystyle \sum_{i=1}^{n} \widehat{\varepsilon}_{i}^{2} =  \frac{1}{n} \sum_{i=1}^{n} \left(Y_i - \widehat{Y}_i \right)^2 = \frac{1}{n} \sum_{i=1}^{n} \left[Y_i - \left(\widehat{\beta}_0 + \widehat{\beta}_1X_i \right)\right]^2$$
+
+
+Esa varianza residual cuantifica la variabilidad (= información) de la variable objetivo que **NO EXPLICA** nuestro modelo sobre X,  [**cuantifica cúanto nos equivamos en promedio**]{.hl-orange}. Además es una función que depende de dos parámetros $\left(\widehat{\beta}_0, \widehat{\beta}_1 \right)$. ¿Cómo [**encontrar el mínimo**]{.hl-orange}?
+
+&nbsp;
+
+. . .
+
+[**Idea**]{.hl-blue}: la forma más directa es por el [**método de los mínimos cuadrados**]{.hl-orange}, originariamente planteado por Legendre y Gauss para estimar la posición de los planeta. Los [**parámetros óptimos**]{.hl-orange} serán aquellos $\left(\widehat{\beta}_0, \widehat{\beta}_1 \right)$ que minimicen dicha suma de cuadrados (que minimicen la varianza residual), desarrollar el cuadrado, [**derivar respecto a cada variable e igualar a 0**]{.hl-orange}.
+
+
+---
+
+## Varianza residual
+
+$$s_{r}^{2} =  \frac{1}{n} \displaystyle \sum_{i=1}^{n} \widehat{\varepsilon}_{i}^{2} =  \frac{1}{n} \sum_{i=1}^{n} \left(Y_i - \widehat{Y}_i \right)^2 = \frac{1}{n} \sum_{i=1}^{n} \left[Y_i - \left(\widehat{\beta}_0 + \widehat{\beta}_1X_i \right)\right]^2$$
+
+Si derivamos...
+
+$$\frac{\partial s_{r}^{2}}{\partial \beta_0} = \frac{1}{n} \sum_{i=1}^{n} \left[ 2\beta_{0} + 2 \beta_1 X_i - 2Y_i \right] = 2\beta_0 + 2\beta_1\frac{1}{n} \sum_{i=1}^{n} X_i - 2\frac{1}{n} \sum_{i=1}^{n} Y_i  = 2 \left(\beta_{0} + \beta_1\bar{x} - \bar{y}\right) $$ 
+
+. . .
+
+$$\frac{\partial s_{r}^{2}}{\partial \beta_1} = \frac{1}{n} \sum_{i=1}^{n} \left[ 2\beta_{1}X_{i}^{2} + 2 \beta_0 X_i - 2Y_iX_i \right] =  2 \left( \beta_{1} \overline{x^2}+\beta_{0}\bar{x} - \overline{xy} \right)$$ 
+
+. . .
+
+Si lo agrupamos en un sistema y lo [**igualamos a cero**]{.hl-orange} para encontrar el óptimo tenemos
+
+$$\left\{\beta_{0} + \beta_{1} \bar{x}   = \bar{y} \atop \overline{x} \beta_{0} + \overline{x^2} \beta_{1} = \overline{xy} \right.$$ 
+
+
+---
+
+## Método mínimos cuadrados
+
+Resolviendo el sistema (con Cramer por ejemplo) tenemos
+
+$$\widehat{\beta}_1 = \frac{\overline{xy} - \bar{x}*\bar{y}}{\overline{x^2} - \left(\bar{x}\right)^2} = \frac{s_{xy}}{s_{x}^{2}}, \quad s_{xy}~  \text{ covarianza muestral entre predictora y objetivo}$$
+
+$$\widehat{\beta}_0 = \frac{\overline{y}*\overline{x^2} - \bar{x}*\overline{xy}}{\overline{x^2} - \left(\bar{x}\right)^2}  = \bar{y} + \frac{\bar{y}*\left(\bar{x}\right)^2- \bar{x}*\overline{xy}}{\overline{x^2} - \left(\bar{x}\right)^2} = \bar{y} - \widehat{\beta}_1 \bar{x}$$
+
+
+
+. . .
+
+Los [**estimadores de los parámetros de una regresión lineal univariante**]{.hl-orange} serán por tanto $\widehat{\beta}_1 = \frac{s_{xy}}{s_{x}^{2}}$ ([**pendiente de la recta**]{.hl-purple}) y $\widehat{\beta}_0 = \bar{y} - \widehat{\beta}_1 \bar{x}$ ([**ordenada en el origen**]{.hl-purple})
+
+. . .
+
+
+* Los parámetros $\left( \beta_0, \beta_1 \right)$ son [**desconocidos pero fijos**]{.hl-orange}
+
+* Los parámetros $\left( \widehat{\beta}_0, \widehat{\beta}_1 \right)$ son estimados a partir de los datos, son [**variables aleatorias**]{.hl-orange} ya que han sido calculados en función de una muestra aleatoria $\left\lbrace \left(x_i, y_i \right) \right\rbrace_{i=1}^{n}$ de la población.
+
+---
+
+## Estimación reg. univariante
+
+Los [**estimadores de los parámetros de una regresión lineal univariante**]{.hl-orange} serán por tanto $\widehat{\beta}_1 = \frac{s_{xy}}{s_{x}^{2}}$ ([**pendiente de la recta**]{.hl-purple}) y $\widehat{\beta}_0 = \bar{y} - \widehat{\beta}_1 \bar{x}$ ([**ordenada en el origen**]{.hl-purple}).
+
+En nuestro ejemplo: $peso = -35.195 + 0.6853*estatura$
+
+
+```{r}
+#| echo: false
+datos <-
+  starwars |> 
+  select(name, height, mass) |>
+  slice(c(1:15, 17:20)) |> 
+  mutate("pred" = -35.19510 + 0.68528*height)
+```
+
+```{r}
+#| code-fold: true
+ggplot(datos, aes(x = height, y = mass)) +
+  geom_segment(aes(xend = height, y = pred, yend = mass),
+               color = "pink", size = 1) +
+  geom_point(color = "orange", size = 4) +
+  geom_line(aes(x = height, y = pred), color = "black", size = 1.5) +
+  labs(x = "estatura (cm)", y = "peso (kg)") +
+  theme_minimal()
+```
+
+
+---
+
+
+## Estimación reg. univariante
+
+Estructuralmente: si unimos con cuerdas cada punto a las posibles rectas, la recta obtenida por mínimos cuadrados es la **recta de equilibrio de «tensar» todos las cuerdas a la vez**.
+
+<video autoplay loop muted playsinline width="600">
+  <source src="edKRHenUXKJAGnvb.mp4" type="video/mp4">
+</video>
+
+
+---
+
+## Estimación reg. univariante
+
+En nuestro ejemplo: $peso = -35.195 + 0.6853*estatura$. ¿Cuál es su [**interpretación**]{.hl-orange}?
+
+* [**Ordenada en el origen**]{.hl-orange}: también llamado **intercepto** es el valor de $Y$ cuando $X=0$. Es decir, $\widehat{\beta}_0$ se puede interpretar como la estimación de $\widehat{Y}$ cuando $X = 0$ (cuando dicha estimación tenga sentido). En nuestro ejemplo: la estimación del peso de cuando no hay estatura es de $-35.195kg$ (sin fiabilidad ya que la estatura nunca valdrá 0)
+
+
+. . .
+
+* [**Pendiente**]{.hl-orange}: cuantifica el incremento de $Y$ cuando $X$ aumenta una unidad. Es decir, $\widehat{\beta}_1$ se puede interpretar como la variación de la **estimación $\widehat{Y}$ cuando $X$ tiene un incremento unitario**. En nuestro ejemplo: en promedio el peso aumenta 0.685kg por cada cm de más que mida el individuo.
+
+&nbsp;
+
+. . .
+
+¡Enhorabuena! Acabamos de hacer nuestro [**primer modelo de aprendizaje estadístico supervisado**]{.hl-orange}
+
+---
+
+
+## ¡Cuidado!
+
+A lo largo del proceso hemos mentado 3 problemas a los que prestar atención:
+
+::: incremental
+
+1. ¿Qué rol está jugando en todo el proceso la [**covarianza entre X e Y**]{.hl-orange}? ¿Qué pasa si es cercana a 0?
+
+2. ¿Cómo cuantificar la [**fiabilidad de mi estimación**]{.hl-orange}?
+
+3. ¿Cómo garantizar que el [**método lo podría extrapolar/inferir**]{.hl-orange} a otros individuos ajenos a la muestra? Si descubro un modelo para predecir la diabetes o el colesterol en 1000 pacientes, ¿cómo saber que la recomendación de hacer ejercicio o dormir bien la puedo generalizar fuera de esa muestra?
+
+:::
+
+---
+
+## Covarianza y correlación
+
+1. ¿Qué rol está jugando en todo el proceso la [**covarianza entre X e Y**]{.hl-orange}? ¿Qué pasa si es cercana a 0?
+
+Como hemos visto la [**pendiente de la recta depende de la covarianza**]{.hl-orange}. La [**covarianza**]{.hl-orange} cuantifica la [**asociación LINEAL**]{.hl-orange}  de una variable X respecto a otra variable Y (ambas continuas): nos está cuantificando cómo de pegados están los puntos a la recta
+
+:::: columns
+::: {.column width="23%"}
+
+$$s_{xy} = \overline{x*y} - \bar{x}*\bar{y}$$
+
+:::
+
+::: {.column width="77%"}
+
+Su signo nos indica la [**dirección de la dependencia**]{.hl-orange}: si es positiva, la relación será creciente (X crece, Y crece); negativa, relación decreciente.
+
+:::
+::::
+
+. . .
+
+:::: columns
+::: {.column width="80%"}
+
+Como toda varianza, la [**covarianza depende de las unidades y magnitudes**]{.hl-orange} de los datos: necesitamos [**estandarizar la covarianza**]{.hl-orange} con el conocido [**coeficiente correlación lineal**]{.hl-orange} ([**siempre entre -1 y 1**]{.hl-orange})
+
+* más cerca de -1 o 1 → relación lineal más fuerte
+* más cerca de 0 → ausencia de relación **LINEAL** → la pendiente de la recta sería nula, ¡no habría modelo dependiente de X!
+:::
+
+::: {.column width="20%"}
+
+$$r_{xy} = \rho_{xy} = \frac{s_{xy}}{s_x s_y}$$
+
+:::
+::::
+
+
+---
+
+## Covarianza y correlación
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/correlaciones.jpg?raw=true)
+
+* nube de puntos más apretada a la recta → más cerca de -1 o 1
+* nube de puntos más distante de la recta → más cerca de 0 (incorreladas) → ¡pero no implica que exista relación, solo que no es en torno a una recta! ([**incorrelación no implica independencia, correlación no implica causalidad**]{.hl-orange})
+
+. . .
+
+Así que parecería razonable [**chequear antes con una visualización**]{.hl-orange} si la nube de puntos se distribuye en torno a una recta.
+
+---
+
+## Fiabilidad
+
+2. ¿Cómo cuantificar la [**fiabilidad de mi estimación**]{.hl-orange}? Para responder deberemos de atender a dos preguntas
+
+* ¿Cuánto [**acierta mi modelo en la muestra**]{.hl-orange} con la que ha sido entrenado? <span style="visibility: hidden;">→ Para ello usaremos el conocido como [**$R^2$ o coeficiente de bondad de ajuste**]{.hl-purple}  (que en el caso que nos ocupa estará relacionado con esa correlación) y que nos proporciona el [**% de información de Y que es explicada**]{.hl-purple} por el modelo</span>
+
+&nbsp;
+
+* En caso de poder generalizar mi modelo, ¿[**puedo generalizarlo sin límites**]{.hl-orange}? ¿A qué rango de valores podría aplicarlo?
+
+
+---
+
+## Fiabilidad
+
+2. ¿Cómo cuantificar la [**fiabilidad de mi estimación**]{.hl-orange}? Para responder deberemos de atender a dos preguntas
+
+* ¿Cuánto [**acierta mi modelo en la muestra**]{.hl-orange} con la que ha sido entrenado? → Para ello usaremos el conocido como [**$R^2$ o coeficiente de bondad de ajuste**]{.hl-purple}  (que en el caso que nos ocupa estará relacionado con esa correlación) y que nos proporciona el [**% de información de Y que es explicada**]{.hl-purple} por el modelo
+
+&nbsp;
+
+* En caso de poder generalizar mi modelo, ¿[**puedo generalizarlo sin límites**]{.hl-orange}? ¿A qué rango de valores podría aplicarlo?
+
+---
+
+## Fiabilidad
+
+2. ¿Cómo cuantificar la [**fiabilidad de mi estimación**]{.hl-orange}? Para responder deberemos de atender a dos preguntas
+
+* ¿Cuánto [**acierta mi modelo en la muestra**]{.hl-orange} con la que ha sido entrenado? → Para ello usaremos el conocido como [**$R^2$ o coeficiente de bondad de ajuste**]{.hl-purple} (que en el caso que nos ocupa estará relacionado con esa correlación) y que nos proporciona el [**% de información de Y que es explicada**]{.hl-purple} por el modelo
+
+&nbsp;
+
+* En caso de poder generalizar mi modelo, ¿[**puedo generalizarlo sin límites**]{.hl-orange}? ¿A qué rango de valores podría aplicarlo? → En caso de poder generalizarse, solo debería aplicar mi [**modelo a datos en el rango de los datos de aprendizaje**]{.hl-purple}. Si tengo un modelo para predecir la probabilidad de infarto con información de personas entre 18 y 40 años, no será fiable (aunque funcione perfecto en la muestra) para personas de 70 años.
+
+---
+
+## Inferir a la población
+
+3. ¿Cómo garantizar que el [**método lo podría extrapolar/inferir**]{.hl-orange} a otros individuos ajenos a la muestra?
+
+Es importante advertir que en los modelos de aprendizaje estamos todo el rato saltando entre dos mundos: la [**muestra**]{.hl-orange} (los datos que usamos para obtener una ecuación de la recta) y la [**población**]{.hl-orange} (si tomo otra muestra de la misma población...¿funcionará igual de bien o mal?)
+
+. . .
+
+Y lo único que vamos a poder disponer (de momento) es una métrica error, de lo bueno o malo qué es, en nuestra muestra. [**¿Cómo saber si tendría sentido su generalización o solo sirve para nuestra muestra?**]{.hl-orange}
+
+. . .
+
+[**Consejo**]{.hl-blue}: siempre que puedas visualiza antes los datos
+
+
+---
+
+## Inferir a la población
+
+Vamos a considerar los valores numéricos de **4 datasets distintos**
+
+```{r}
+#| echo: false
+library(tidyr)
+anscombe_data <-
+  tibble("x" = c(datasets::anscombe$x1, datasets::anscombe$x2,
+                 datasets::anscombe$x3, datasets::anscombe$x4),
+         "y" = c(datasets::anscombe$y1, datasets::anscombe$y2,
+                 datasets::anscombe$y3, datasets::anscombe$y4),
+         "dataset" = c(rep("dataset-1", 11), rep("dataset-2", 11),
+                       rep("dataset-3", 11), rep("dataset-4", 11)))
+anscombe_data |> 
+  summarise("mean_x" = mean(x), "mean_y" = mean(y),
+            "cor_xy" = cor(x, y), .by = dataset)
+```
+
+Sabiendo que la [**correlación**]{.hl-orange} está intrinsecamente relacionada con la calidad de nuestro modelo de recta, ¿en cuál de ellos crees que funcionará mejor? ¿En cuál de ellos tendrá sentido generalizarlo?
+
+---
+
+## Visualiza, siempre visualiza
+
+
+:::: columns
+::: {.column width="80%"}
+
+```{r}
+#| code-fold: true
+ggplot(anscombe_data, aes(x = x, y = y, color = dataset)) +
+  geom_point(size = 3.5, alpha = 0.65) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_color_manual(values = c("#2f357c", "#b0799a",
+                                "#f5bb50", "#ada43b")) +
+  facet_wrap(~dataset, nrow = 2) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+:::
+
+::: {.column width="20%"}
+
+&nbsp;
+
+dataset 2 y 4: el modelo ha [**funcionado bien SOLO EN ESA MUESTRA**]{.hl-red}, ¡pero ha sido casualidad, no tiene sentido generalizarlo!
+
+:::
+::::
+
+---
+
+## Visualiza, siempre visualiza
+
+
+```{r}
+#| code-fold: true
+ggplot(datasauRus::datasaurus_dozen |>
+         filter(dataset != "wide_lines"),
+       aes(x = x, y = y, color = dataset)) +
+  geom_point(size = 3.5, alpha = 0.65, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, show.legend = FALSE) +
+  MetBrewer::scale_color_met_d(palette_name = "Renoir") +
+  facet_wrap(~dataset, nrow = 4) +
+  theme_minimal()
+```
+
+Todos tienen exactamente la misma media y correlación.
+
+---
+
+##  Caso práctico
+
+Vamos a poner en práctica lo aprendido usando un [**software estadístico como R**]{.hl-orange} con el siguiente dataset
+
+:::: columns
+::: {.column width="56%"}
+
+```{r}
+library(readr)
+datos <- read_csv(file = "./wine.csv")
+datos
+```
+
+[**El objetivo: predecir el precio**]{.hl-orange}
+
+
+:::
+
+::: {.column width="44%"}
+
+::: {.smaller-un-poquito-text}
+
+
+El dataset está formado por 27 observaciones (cosechas de vino rojo Burdeos) y 7 variables
+
+* `Year`, `Age`: año de la cosecha y número de años en barrica.
+* `Price`: precio en 1990-1991 (**escala log**)
+* `WinterRain`: lluvia (en mm) que cayó ese año en invierno.
+* `AGST`: crecimiento medio de la temperatura (en grados Celsius) durante la temporada.
+* `HarvestRain`: lluvia (en mm) que cayó ese año durante la cosecha.
+* `FrancePop`: población (miles de habitantes) de Francia.
+
+:::
+:::
+::::
+
+
+---
+
+## Caso práctico
+
+
+Para predecir el precio vamos a usar (de momento) una [**regresión lineal univariante**]{.hl-orange}, donde $Y = precio$ y deberemos elegir la predictora $X$ más apropiada. ¿Cómo saber [**la predictora que va a tener mayor relación lineal con $Y$**]{.hl-orange}?
+
+. . .
+
+:::: columns
+::: {.column width="25%"}
+
+```{r}
+library(corrr)
+datos |>
+  correlate() |>
+  select(term, Price)
+```
+
+:::
+
+::: {.column width="37%"}
+
+```{r}
+#| echo: false
+#| fig-width: 6.5
+library(corrplot)
+datos |> cor() |> corrplot()
+```
+
+```{r}
+#| eval: false
+library(corrplot)
+datos |> cor() |> corrplot()
+```
+
+:::
+
+::: {.column width="38%"}
+
+```{r}
+#| echo: false
+#| fig-width: 6.5
+library(GGally)
+ggpairs(datos) + theme_minimal()
+```
+
+```{r}
+#| eval: false
+library(GGally)
+ggpairs(datos) + theme_minimal()
+```
+
+:::
+::::
+
+---
+
+## Caso práctico
+
+Una vez que hemos decidido que predictora usaremos vamos a plantear el [**modelo univariante**]{.hl-orange}
+
+$$Price = \beta_0 + \beta_1*AGST + \varepsilon \quad \text{¿cómo hacer en R el ajuste para obtener } \widehat{\beta}_0,~\widehat{\beta}_1 \text{?}$$
+
+. . .
+
+:::: columns
+::: {.column width="50%"}
+
+`lm(data = ., formula = y ~ .)` indicando los datos, la variable objetivo y las predictoras
+
+```{r}
+#| eval: false
+library(broom)
+fit <- lm(data = datos, formula = Price ~ AGST)
+fit |> tidy()
+```
+
+:::
+
+::: {.column width="50%"}
+
+&nbsp;
+
+&nbsp;
+
+```{r}
+#| echo: false
+library(broom)
+ajuste <- lm(data = datos, formula = Price ~ AGST)
+ajuste |> tidy()
+```
+
+:::
+
+::::
+
+
+. . .
+
+::: {.smaller-un-poquito-text}
+
+
+* `Estimate` proporciona la estimación de los parámetros
+
+  - $\widehat{\beta}_0=$ `r round(ajuste$coefficients[1], 3)`: predicción del precio (escala log) cuando $AGST = 0$ (es decir, si $AGST = 0$, entonces precio es de $0.0288 = exp(-3.547)$)
+  - $\widehat{\beta}_1=$ `r round(ajuste$coefficients[2], 3)`: lo que aumenta el precio (escala log) por cada grado de aumento (es decir, por cada grado que aumenta la temperatura el precio se incrementa en escala logarítmica $0.6426$, es decir, el precio se multiplica por $exp(0.6426) = 1.901$ --> aumenta un 90.1%)
+
+:::
+
+---
+
+## Evaluación: bondad de ajuste
+
+```{r}
+ajuste |> summary()
+```
+
+La salida nos proporciona muchos más elementos que de momento no sabemos interpretar, pero si `Multiple R-squared`:  0.4456
+
+Ese valor representa el $R^2$ de que ya hemos hablado, conocido como [**coeficiente de bondad de ajuste**]{.hl-orange}. ¿Qué es?
+
+---
+
+## Evaluación: bondad de ajuste
+
+Dicho coeficiente [**cuantifica el acierto del modelo**]{.hl-orange}. Y para ello la primera pregunta que deberíamos hacernos es: ¿cuál es el **objetivo**? ¿Qué nos gustaría que pasase si fuese perfecto?
+
+. . .
+
+Si construimos un **modelo predictivo para $Y$**, lo ideal sería que nuestro modelo puede capaz de [**capturar/explicar toda la variabilidad respecto a la media de Y**]{.hl-orange} (por qué sube cuando sube, por qué baja, etc), y siempre [**información = varianza**]{.hl-blue}
+
+. . .
+
+* [**Información de $Y$**]{.hl-orange} (info a modelizar): $s_{y}^2 = \frac{1}{n} \sum_{i=1}^{n} \left(y_i - \bar{y} \right)^2$
+
+* [**Información de $\widehat{Y}$**]{.hl-orange} (info modelizada): $s_{\widehat{y}}^2 = \frac{1}{n} \sum_{i=1}^{n} \left(\widehat{y}_i - \bar{y} \right)^2$
+
+* [**Información de $\widehat{\varepsilon}$**]{.hl-orange} (info no modelizada): $s_{r}^2 = \frac{1}{n} \sum_{i=1}^{n} \widehat{\varepsilon}_{i}^2$
+
+
+
+. . .
+
+Vamos a construir un [**ratio de info explicada**]{.hl-orange} ([**bondad de ajuste**]{.hl-orange} o $R^2$)
+
+$$R^2 = \frac{\text{info modelizada}}{\text{info a modelizar}} = \frac{s_{\widehat{y}}^2}{s_{y}^2}  \in [0,1], \quad 
+\text{si se acerca 1 -> explica casi todo lo explicable}$$
+
+
+---
+
+## Evaluación: bondad de ajuste
+
+Dicho coeficiente [**cuantifica el acierto del modelo**]{.hl-orange}. Y para ello la primera pregunta que deberíamos hacernos es: ¿cuál es el **objetivo**? ¿Qué nos gustaría que pasase si fuese perfecto?
+
+Si construimos un **modelo predictivo para $Y$**, lo ideal sería que nuestro modelo puede capaz de [**capturar/explicar toda la variabilidad respecto a la media de Y**]{.hl-orange} (por qué sube cuando sube, por qué baja, etc), y siempre [**información = varianza**]{.hl-blue}
+
+
+:::: columns
+::: {.column width="67%"}
+
+
+
+* [**Información de $Y$**]{.hl-orange} (info a modelizar): $s_{y}^2 = \frac{1}{n} \sum_{i=1}^{n} \left(y_i - \bar{y} \right)^2$
+
+* [**Información de $\widehat{Y}$**]{.hl-orange} (info modelizada): $s_{\widehat{y}}^2 = \frac{1}{n} \sum_{i=1}^{n} \left(\widehat{y}_i - \bar{y} \right)^2$
+
+* [**Información de $\widehat{\varepsilon}$**]{.hl-orange} (info no modelizada): $s_{r}^2 = \frac{1}{n} \sum_{i=1}^{n} \widehat{\varepsilon}_{i}^2$
+
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="28%"}
+
+::: {.smaller-un-poquito-text}
+
+
+$$s_{y}^2 = s_{\widehat{y}}^2 + s_{r}^2$$
+
+(para modelos lineales)
+
+:::
+:::
+
+::::
+
+Vamos a construir un [**ratio de info explicada**]{.hl-orange} ([**bondad de ajuste**]{.hl-orange} o $R^2$)
+
+$$R^2 = \frac{\text{info modelizada}}{\text{info a modelizar}} = \frac{s_{\widehat{y}}^2}{s_{y}^2}  \in [0,1], \quad 
+\text{si se acerca 1 -> explica casi todo lo explicable}$$
+
+
+---
+
+## Fase de evaluación
+
+$$R^2 = \frac{\text{info modelizada}}{\text{info a modelizar}} = \frac{s_{\widehat{y}}^2}{s_{y}^2}  \in [0,1], \quad s_{y}^2 = s_{\widehat{y}}^2 + s_{r}^2$$
+
+Esa descomposición de la varianza (conocido como descomposición ANOVA) nos sirve para obtener la siguiente fórmula en modelos lineales
+
+
+$$R^2 = \frac{\text{info modelizada}}{\text{info a modelizar}} = \frac{s_{\widehat{y}}^2}{s_{y}^2} =  \frac{s_{y}^2 - s_{r}^2}{s_{y}^2} =   1 - \frac{s_{r}^2}{s_{y}^2}  \in [0,1]$$
+
+Además en el [**caso univariante**]{.hl-orange} tenemos que $R^2 = r_{xy}^2$ (correlación al cuadrado).
+
+. . .
+
+
+Un gran poder conlleva una gran responsabilidad, y es que el [**abuso de usar solo el $R^2$ para evaluar nuestro modelo**]{.hl-orange} puede llevarnos a situaciones difíciles de manejar.
+
+---
+
+## Problemas con el R2
+
+Vamos a [**simular nuestros propios**]{.hl-orange} datos para entenderlo mejor
+
+1. Simulamos una [**muestra de una predictora $X$**]{.hl-orange} de tamaño $n = 100$ que siga una $N(2, \sigma = 0.5)$
+
+```{r}
+set.seed(12345)
+x <- rnorm(n = 100, mean = 2, sd = 0.5)
+```
+
+. . .
+
+2. Simulamos [**dos muestras de errores $\varepsilon$**]{.hl-orange} que sigan $N(0, \sigma = 0.5)$ y  $N(2, \sigma = 2.5)$, resp.
+
+
+:::: columns
+::: {.column width="50%"}
+
+```{r}
+error_1 <- rnorm(n = 100, mean = 0, sd = 0.5)
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+error_2 <- rnorm(n = 100, mean = 0, sd = 2.5)
+```
+
+:::
+
+::::
+
+. . .
+
+3. Vamos a construir un dataset con $X$ e $Y$ donde la [**parte determinística (lo que podemos modelizar) sea la misma**]{.hl-orange} $E[Y|X] = -3 + 2X$, solo cambiando el ruido
+
+:::: columns
+::: {.column width="50%"}
+
+
+```{r}
+#| eval: false
+datos_1 <- tibble("x" = x, "error" = error_1,
+                  "y" = -3 + 2*x + error)
+datos_1
+```
+
+```{r}
+#| echo: false
+datos_1 <- tibble("x" = x, "error" = error_1,
+                  "y" = -2 + 1.5*x + error)
+datos_1 |> slice(1:4)
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: false
+datos_2 <- tibble("x" = x, "error" = error_2,
+                  "y" = -3 + 2*x + error)
+datos_2
+```
+
+```{r}
+#| echo: false
+datos_2 <- tibble("x" = x, "error" = error_2,
+                  "y" = -2 + 1.5*x + error)
+datos_2 |> slice(1:4)
+```
+
+:::
+
+::::
+
+
+---
+
+## Problemas con el R2
+
+
+:::: columns
+::: {.column width="50%"}
+
+```{r}
+#| eval: false
+ggplot(datos_1, aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+```{r}
+#| echo: false
+ggplot(datos_1, aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_y_continuous(limits = c(-4, 6)) +
+  theme_minimal()
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: false
+ggplot(datos_2, aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+```{r}
+#| echo: false
+ggplot(datos_2, aes(x = x, y = y)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_y_continuous(limits = c(-4, 6)) +
+  theme_minimal()
+```
+
+:::
+
+::::
+
+
+. . .
+
+¡Es casi la [**misma recta de regresión**]{.hl-blue}! La parte que se puede modelizar es la misma pero uno tiene $R^2 = 0.76$ (modelo explica el 76% de la info de $Y$) y el otro $R^2 = 0.09$
+
+:::: columns
+::: {.column width="50%"}
+
+```{r}
+cor(datos_1$x, datos_1$y)^2
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+cor(datos_2$x, datos_2$y)^2
+```
+
+:::
+
+::::
+
+---
+
+## Generalizar: inferencia
+
+No solo es que el $R^2$ va a depender intrínsecamente del contexto (más o menos ruidoso) sino que además solo nos habla de [**cómo funciona el modelo en la muestra de entrenamiento**]{.hl-orange}. ¿Qué pasaría si yo tomase otra muestra?
+
+. . .
+
+::: incremental
+* Muestra 1 → parámetros estimados $\left(\widehat{\beta}_{0}^{1}, \widehat{\beta}_{1}^{1}\right)$
+
+* Muestra 2 → parámetros estimados $\left(\widehat{\beta}_{0}^{2}, \widehat{\beta}_{1}^{2}\right)$
+
+
+* Muestra M → parámetros estimados $\left(\widehat{\beta}_{0}^{M}, \widehat{\beta}_{1}^{M}\right)$
+
+:::
+
+. . .
+
+Tendremos dos realizaciones de dos variables aleatorias $\left(\widehat{\beta}_{0}^{1}, \ldots, \widehat{\beta}_{0}^{M}\right)$ y $\left(\widehat{\beta}_{1}^{1}, \ldots, \widehat{\beta}_{1}^{M}\right)$.
+
+¿Podemos saber algo de su [**distribución**]{.hl-orange}? ¿Van a **cambiar** mucho entre cada muestra? (si cambiasen mucho entre muestra y muestra, sería una [**estimación poco precisa**]{.hl-orange})
+
+---
+
+## Generalizar: inferencia
+
+Vamos a de nuevo a simular nuestros propios datos
+
+1. Simulamos una muestra de tamaño $n = 500$ de una predictora $X \sim N(\mu=3, \sigma = 1)$, un ruido $\varepsilon \sim N(\mu=0, \sigma = 0.3)$ y una variable objetivo aleatoria $Y$ bajo la hipótesis de que $Y$ puede ser explicada por $X$ mediante la recta $\beta_0 = -2$ y $\beta_1 = 5$.
+
+```{r}
+set.seed(12345)
+n <- 500
+x <- rnorm(n = n, mean = 3, sd = 1)
+eps <- rnorm(n = n, mean = 0, sd = 0.3)
+y <- -2 + 5*x + eps
+datos <- tibble("x" = x, "y" = y)
+```
+
+. . .
+
+2. Calculamos (manualmente o con `lm()`) los valores estimados $\widehat{\beta}_0$ y $\widehat{\beta}_1$
+
+```{r}
+ajuste <- lm(data = datos, formula = y ~ x)
+betas <- tibble("beta_0" = ajuste$coefficients[1], "beta_1" = ajuste$coefficients[2])
+betas
+```
+
+---
+
+## Generalizar: inferencia
+
+
+3. El proceso anterior (x --> errores --> y --> estimar betas) lo vamos a meter **dentro un bucle de 2000 iteraciones**, guardándonos las estimaciones $\widehat{\beta}_0$ y $\widehat{\beta}_1$ (`bind_rows()` concatena filas)
+
+```{r}
+set.seed(12345)
+iteraciones <- 2000
+betas <- tibble()
+for (i in 1:iteraciones) {
+  
+  x <- rnorm(n = n, mean = 3, sd = 1)
+  eps <- rnorm(n = n, mean = 0, sd = 0.3)
+  y <- -2 + 5*x + eps
+  datos <- tibble("x" = x, "y" = y)
+
+  ajuste <- lm(data = datos, formula = y ~ x)
+  betas <-
+    betas |> 
+    bind_rows(tibble("iteracion" = i, "beta_0" = ajuste$coefficients[1], "beta_1" = ajuste$coefficients[2]))
+}
+betas
+```
+
+---
+
+## Generalizar: inferencia
+
+
+```{r}
+#| code-fold: true
+ggplot(betas |>
+         select(-iteracion) |> 
+         pivot_longer(cols = everything(), names_to = "beta",
+                      values_to = "values")) +
+  geom_density(aes(x = values, color = beta, fill = beta),
+               alpha = 0.6) +
+  geom_vline(data = tibble("x" = c(-2, 5), "beta" = c("beta_0", "beta_1")),
+             aes(xintercept = x, color = beta)) +
+  geom_vline(data =
+               tibble("beta" =  c("beta_0", "beta_1"),
+                      "mean_beta" = c(mean(betas$beta_0), mean(betas$beta_1))),
+             aes(xintercept = mean_beta, group = beta),
+                 color = "#414141", linetype = "dotted") +
+  MetBrewer::scale_color_met_d(palette_name = "Renoir") +
+  MetBrewer::scale_fill_met_d(palette_name = "Renoir") +
+  facet_wrap(~beta, scales = "free_x") +
+  labs(title = "Betas a partir de simular datos",
+       subtitle = "(lo que pasaría si se pudiese tomar una muestra tras otra)") +
+  theme_minimal()
+```
+
+::: {.smaller-un-poquito-text}
+
+
+Las líneas verticales de colores representan los valores reales $\beta_0$ y $\beta_1$ a estimar, y la línea discontinua gris la estimación media tras 2000 iteraciones: la [**diferencia entre ambas se conoce como sesgo**]{.hl-orange} (diferencia promedio entre el estimador y lo estimado)
+
+:::
+
+---
+
+## Generalizar: inferencia
+
+
+```{r}
+#| code-fold: true
+ggplot(betas |>
+         select(-iteracion) |> 
+         pivot_longer(cols = everything(), names_to = "beta",
+                      values_to = "values")) +
+  geom_density(aes(x = values, color = beta, fill = beta),
+               alpha = 0.6) +
+  geom_vline(data = tibble("x" = c(-2, 5), "beta" = c("beta_0", "beta_1")),
+             aes(xintercept = x, color = beta)) +
+  geom_vline(data =
+               tibble("beta" =  c("beta_0", "beta_1"),
+                      "mean_beta" = c(mean(betas$beta_0), mean(betas$beta_1))),
+             aes(xintercept = mean_beta, group = beta),
+                 color = "#414141", linetype = "dotted") +
+  MetBrewer::scale_color_met_d(palette_name = "Renoir") +
+  MetBrewer::scale_fill_met_d(palette_name = "Renoir") +
+  facet_wrap(~beta, scales = "free_x") +
+  labs(title = "Betas a partir de simular datos",
+       subtitle = "(lo que pasaría si se pudiese tomar una muestra tras otra)") +
+  theme_minimal()
+```
+
+::: {.smaller-un-poquito-text}
+
+La concentración de la campana nos cuantifica la [**varianza de los estimadores**]{.hl-orange}: un valor elevado implicaría poca precisión (según que muestra tomes, cambian mucho las conclusiones).
+
+:::
+
+---
+
+## Balance sesgo-varianza
+
+
+
+:::: columns
+::: {.column width="50%"}
+
+::: {.smaller-muestra-poblacion-text}
+
+
+* El [**sesgo**]{.hl-orange} en una estimación es un [**error sistemático**]{.hl-orange}. 
+
+* La [**varianza**]{.hl-orange} de los estimadores cuantificarán su [**precisión**]{.hl-orange}: cuánto varía si tomásemos otra muestra
+
+
+* El error en estimar $\widehat{Y}$ se puede descomponer
+
+$$\begin{eqnarray}MSE \left(\widehat{Y} \right) &=& \left( E \left[  \widehat{Y}\right] - Y \right)^2 + Var \left[ \widehat{Y} \right] + ruido \nonumber \\ &=& sesgo^2 + varianza + ruido\end{eqnarray}$$
+
+
+:::
+
+:::
+
+::: {.column width="4%"}
+
+:::
+
+::: {.column width="46%"}
+
+
+![](https://github.com/dadosdelaplace/docencia/blob/main/supervisado-datascience/diapos/img/bias_varianc_tradeoff.jpg?raw=true){width=340px}
+
+:::
+
+::::
+
+
+. . .
+
+:::: columns
+::: {.column width="50%"}
+
+::: {.smaller-muestra-poblacion-text}
+
+
+* Si **bajamos el sesgo** sube la varianza; si **baja la varianza** sube el sesgo: [**balance sesgo-varianza**]{.hl-orange}
+
+  - [**Bajoajuste (underfitting)**]{.hl-orange}: modelos muy simples proporcionan un **sesgo muy grande** y **poca varianza** (predicción siempre igual)
+  - [**Sobreajuste (overfitting)**]{.hl-orange}: modelos muy complicados proporcionan un **sesgo bajo** pero una **gran varianza** para cada intento (memoriza)
+
+
+:::
+
+:::
+
+::: {.column width="4%"}
+
+:::
+
+::: {.column width="46%"}
+
+
+![](https://datascience.recursos.uoc.edu/wp-content/uploads/2022/09/PID_00275826_38.jpg){width=300px}
+
+:::
+
+::::
+
+
+
+---
+
+
+## Balance sesgo-varianza
+
+
+```{r}
+#| echo: false
+ggplot(betas |>
+         select(-iteracion) |> 
+         pivot_longer(cols = everything(), names_to = "beta",
+                      values_to = "values")) +
+  geom_density(aes(x = values, color = beta, fill = beta),
+               alpha = 0.6) +
+  geom_vline(data = tibble("x" = c(-2, 5), "beta" = c("beta_0", "beta_1")),
+             aes(xintercept = x, color = beta)) +
+  geom_vline(data =
+               tibble("beta" =  c("beta_0", "beta_1"),
+                      "mean_beta" = c(mean(betas$beta_0), mean(betas$beta_1))),
+             aes(xintercept = mean_beta, group = beta),
+                 color = "#414141", linetype = "dotted") +
+  MetBrewer::scale_color_met_d(palette_name = "Renoir") +
+  MetBrewer::scale_fill_met_d(palette_name = "Renoir") +
+  facet_wrap(~beta, scales = "free_x") +
+  labs(title = "Betas a partir de simular datos",
+       subtitle = "(lo que pasaría si se pudiese tomar una muestra tras otra)") +
+  theme_minimal()
+```
+
+Si te fijas en nuestro caso los [**estimadores mínimos cuadrados son insesgados**]{.hl-orange}, es decir, $E[\widehat{\beta}] = \beta$. ¿Y su varianza? ¿Y su distribución?
+
+---
+
+
+## Generalizar: inferencia
+
+
+Hasta ahora no hemos pedido nada a la muestra $\left\lbrace \left( X_i, Y_i \right) \right\rbrace_{i=1}^{n}$ pero la regresión lineal, como todo modelo paramétrico, [**necesita de hipótesis**]{.hl-orange}. ¿Para qué necesitaríamos [**hipótesis**]{.hl-orange} entonces?
+
+. . .
+
+Hasta ahora  lo único que hemos podido realizar es una [**estimación puntual**]{.hl-orange} de los parámetros, pero dado que dichos estimadores serán variables aleatorias, necesitaremos realizar [**inferencia estadística**]{.hl-orange} sobre ellos para poder extrapolar/inferior los resultados a la población.
+
+. . .
+
+En el caso de la regresión lineal univariante pediremos [**4 hipótesis**]{.hl-orange}
+
+1. [**Linealidad**]{.hl-green}: el valor esperado de $Y$ es $E \left[Y | \boldsymbol{X} = x \right] = \beta_0 + \beta_1 x$
+
+2. [**Homocedasticidad**]{.hl-green}: necesitamos que la [**varianza del error sea finita y constante, sin depender de $x$**]{.hl-orange}, tal que $\sigma_{r}^2 = \sigma_{\varepsilon}^2 = {\rm Var} \left[\varepsilon | \boldsymbol{X} = x \right] = cte < \infty$.
+
+3. [**Normalidad**]{.hl-green}: pediremos que $\varepsilon \sim N \left(0, \sigma_{r}^2 \right)$
+
+4. [**Independencia**]{.hl-green}: los errores $\left\lbrace \varepsilon_i \right\rbrace_{i=1}^{n}$ deben ser independientes entre sí (el error en una observación no depende de otras). En particular, serán **incorrelados**
+
+
+---
+
+
+## Generalizar: inferencia
+
+
+Las 4 hipótesis se pueden [**resumir de manera teórica**]{.hl-orange} en $Y | \boldsymbol{X} = x \sim N \left(\beta_0 + \beta_1x, \sigma_{\varepsilon}^2 \right)$
+
+. . .
+
+Las hipótesis nos permiten decir que los [**parámetros estimados siguen una distribución normal**]{.hl-orange} de [**media el parámetro**]{.hl-orange}  a estimar y de [**varianza el conocido como standard error**]{.hl-orange}
+
+$$\widehat{\beta}_j | \left( X=x \right) \sim N \left(\beta_j, SE \left(\widehat{\beta}_j\right)^2 \right), \quad j=0,1$$
+
+. . .
+
+En el caso univariante tenemos que la [**varianza de nuestros parámetros**]{.hl-orange} se define como
+
+$$SE \left(\widehat{\beta}_0\right)^2 = \frac{\sigma_{\varepsilon}^{2}}{n}\left[ 1+ \frac{\bar{x}^2}{s_{x}^2} \right], \quad SE \left(\widehat{\beta}_1\right)^2 = \frac{\sigma_{\varepsilon}^{2}}{n s_{x}^2}$$
+
+
+. . .
+
+* [**Insesgados**]{.hl-blue}: ambos son [**estimadores insesgados**]{.hl-orange} ya que  $E \left[ \widehat{\beta}_j \right] = \beta_j$
+
+¿Pero de qué depende la [**precisión (varianza de los estimadores)**]{.hl-orange}?
+
+---
+
+## Generalizar: inferencia
+
+$$SE \left(\widehat{\beta}_0\right)^2 = \frac{\sigma_{\varepsilon}^{2}}{n}\left[ 1+ \frac{\bar{x}^2}{s_{x}^2} \right], \quad SE \left(\widehat{\beta}_1\right)^2 = \frac{\sigma_{\varepsilon}^{2}}{n s_{x}^2}$$
+
+* [**Precisión vs tamaño muestral**]{.hl-blue}: cuando $n \to \infty$, sus varianzas tienden a cero, es decir, [**a más datos, mayor precision**]{.hl-green} (menos varianza tendrán los estimadores)
+
+
+* [**Precisión vs var residual**]{.hl-blue}: más varianza del error, mayor varianza de los parámetros, es decir, [**más ruido implicará menos precisión**]{.hl-red}.
+
+
+* [**Precisión vs varianza de X**]{.hl-blue}: más varianza de la predictora $s_{x}^2$, menos varianza de los parámetros, es decir, cuánta [**más información (varianza) contenga nuestra tabla, mayor precisión**]{.hl-green}.
+
+* [**Precisión vs media X**]{.hl-blue}: solo afecta $\beta_0$, cuya [**precisión decrece cuando la media aumenta**]{.hl-red}.
+
+. . .
+
+¿Y [**$\sigma_{\varepsilon}^2$ qué es**]{.hl-orange}?
+
+
+---
+
+## Generalizar: inferencia
+
+$$\widehat{\beta}_j | \left( X=x \right) \sim N \left(\beta_j, SE \left(\widehat{\beta}_j\right)^2 \right), \quad SE \left(\widehat{\beta}_0\right)^2 = \frac{\sigma_{\varepsilon}^{2}}{n}\left[ 1+ \frac{\bar{x}^2}{s_{x}^2} \right], \quad SE \left(\widehat{\beta}_1\right)^2 = \frac{\sigma_{\varepsilon}^{2}}{n s_{x}^2}$$
+
+El valor $\sigma_{\varepsilon}^{2}$ representa la [**varianza residual poblacional**]{.hl-orange} (varianza poblacional del error teórico), la cual es [**desconocida**]{.hl-orange} ya que solo contamos con una estimación muestral de dicho error: dicho valor será [**sustituido por su estimador insesgado**]{.hl-orange}  (donde $p$ es el número de variables)
+
+
+$$\widehat{\sigma_{\varepsilon}^{2}} = \frac{n}{n-p-1} s_{r}^{2} = \frac{1}{n-p-1} \displaystyle \sum_{i=1}^{n} \widehat{\varepsilon}_{i}^2 =_{p=1} \frac{1}{n-2} \displaystyle \sum_{i=1}^{n} \widehat{\varepsilon}_{i}^2 := \text{Res standard error}^2$$
+
+. . .
+
+
+$$\frac{\widehat{\beta}_j - \beta_j}{\widehat{SE} \left(\widehat{\beta}_j\right)} | \left( X=x \right) \sim t_{n-p-1} , \quad \widehat{SE} \left(\widehat{\beta}_0\right)^2 = \frac{\widehat{\sigma_{\varepsilon}^{2}}}{n}\left[ 1+ \frac{\bar{x}^2}{s_{x}^2} \right], \quad \widehat{SE} \left(\widehat{\beta}_1\right)^2 = \frac{\widehat{\sigma_{\varepsilon}^{2}}}{n s_{x}^2}$$
+
+
+---
+
+## Inferencia de los parámetros
+
+
+```{r}
+ajuste |> summary()
+```
+
+::: {.smaller-muestra-poblacion-text}
+
+* `std error`: es lo que hemos denotado como $\widehat{SE} \left(\widehat{\beta}_j\right)$ (la estimación de la desviación típica de los parámetros)
+
+
+* `t value`: es el estadístico $\frac{\widehat{\beta}_j - 0}{\widehat{SE} \left(\widehat{\beta}_j\right)}$ que hemos dicho que sigue una t-Student (bajo la hipótesis nula $\beta_j = 0$)
+
+* `Pr(>|t|)`: representa un p-valor del contraste $H_0:~\beta_j = 0$
+
+
+* `Residual standard error`: estimador insesgado de la desv típica residual ($\widehat{\sigma_{\varepsilon}}$)
+
+:::
+
+---
+
+## Inferencia de los parámetros
+
+
+```{r}
+ajuste |> summary()
+```
+
+Si reflexionamos sobre lo que esto significa: [**si se cumplen una serie de hipótesis**]{.hl-orange} podemos [**conocer la distribución de los parámetros**]{.hl-orange}, lo que nos permite inferior los resultados a la población y, además, nos permite [**simular su valor sin necesidad de generar muestras en bucle**]{.hl-orange}
+
+---
+
+## Inferencia de los parámetros
+
+¿Recuerdas la simulación anterior? Habíamos repetido el proceso de ajuste **dentro un bucle de 2000 iteraciones**, simulando en cada una de ellas una muestra de tamaño $n = 500$ de $X \sim N(\mu=3, \sigma = 1)$, $\varepsilon \sim N(\mu=0, \sigma = 0.3)$ y una variable objetivo aleatoria $Y$ bajo la hipótesis de que $Y$ puede ser explicada por $X$ mediante la recta $\beta_0 = -2$ y $\beta_1 = 5$.
+
+
+```{r}
+#| echo: false
+set.seed(12345)
+iteraciones <- 2000
+betas <- tibble()
+for (i in 1:iteraciones) {
+  
+  x <- rnorm(n = n, mean = 3, sd = 1)
+  eps <- rnorm(n = n, mean = 0, sd = 0.3)
+  y <- -2 + 5*x + eps
+  datos <- tibble("x" = x, "y" = y)
+
+  ajuste <- lm(data = datos, formula = y ~ x)
+  betas <-
+    betas |> 
+    bind_rows(tibble("iteracion" = i, "beta_0" = ajuste$coefficients[1], "beta_1" = ajuste$coefficients[2]))
+}
+
+ggplot(betas |>
+         select(-iteracion) |> 
+         pivot_longer(cols = everything(), names_to = "beta",
+                      values_to = "values")) +
+  geom_density(aes(x = values, color = beta, fill = beta),
+               alpha = 0.6) +
+  geom_vline(data = tibble("x" = c(-2, 5), "beta" = c("beta_0", "beta_1")),
+             aes(xintercept = x, color = beta)) +
+  geom_vline(data =
+               tibble("beta" =  c("beta_0", "beta_1"),
+                      "mean_beta" = c(mean(betas$beta_0), mean(betas$beta_1))),
+             aes(xintercept = mean_beta, group = beta),
+                 color = "#414141", linetype = "dotted") +
+  MetBrewer::scale_color_met_d(palette_name = "Renoir") +
+  MetBrewer::scale_fill_met_d(palette_name = "Renoir") +
+  facet_wrap(~beta, scales = "free_x") +
+  labs(title = "Betas a partir de simular datos",
+       subtitle = "(lo que pasaría si se pudiese tomar una muestra tras otra)") +
+  theme_minimal()
+```
+
+. . .
+
+Y aquí viene la magia: si se cumplen las hipótesis, [**¡basta con que hagas una ya que puedes usar su distribución!**]{.hl-orange}
+
+---
+
+## Inferencia de los parámetros
+
+1. Simulamos muestra de $n = 500$ de $X \sim N(\mu=3, \sigma = 1)$, $\varepsilon \sim N(\mu=0, \sigma = 0.3)$ y una variable objetivo aleatoria $Y$ bajo la hipótesis de que $Y$ puede ser explicada por $X$ mediante la recta $\beta_0 = -2$ y $\beta_1 = 5$. Calculamos (manualmente o con `lm()`) los valores estimados $\widehat{\beta}_0$ y $\widehat{\beta}_1$
+
+```{r}
+set.seed(12345)
+n <- 500
+x <- rnorm(n = n, mean = 3, sd = 1)
+eps <- rnorm(n = n, mean = 0, sd = 0.3)
+y <- -2 + 5*x + eps
+datos <- tibble("x" = x, "y" = y)
+ajuste <- lm(data = datos, formula = y ~ x)
+ajuste |> broom::tidy()
+```
+
+. . .
+
+2. Si se cumplen hipótesis $\widehat{\beta}_0 \sim N \left(-1.99, \sigma = 0.0443 \right)$ y $\widehat{\beta}_1 \sim N \left(5, \sigma = 0.0137 \right)$. Simulamos muestras de tamaño 2000
+
+:::: columns
+::: {.column width="60%"}
+
+```{r}
+beta_0 <- rnorm(n = 2000, mean = -1.99, sd = 0.0443)
+beta_1 <- rnorm(n = 2000, mean = 5, sd = 0.0137)
+```
+
+:::
+::::
+
+---
+
+## Inferencia de los parámetros
+
+3. [**Comparamos la distribución de los betas**]{.hl-orange} generados a partir de simular muestras y los simulados suponiendo que se cumplen las hipótesis
+
+```{r}
+#| echo: false
+#| fig-width: 12
+set.seed(12345)
+iteraciones <- 2000
+betas <- tibble()
+for (i in 1:iteraciones) {
+  
+  x <- rnorm(n = n, mean = 3, sd = 1)
+  eps <- rnorm(n = n, mean = 0, sd = 0.3)
+  y <- -2 + 5*x + eps
+  datos <- tibble("x" = x, "y" = y)
+
+  ajuste <- lm(data = datos, formula = y ~ x)
+  betas <-
+    betas |> 
+    bind_rows(tibble("iteracion" = i, "beta_0" = ajuste$coefficients[1], "beta_1" = ajuste$coefficients[2]))
+}
+
+gg_1 <-
+  ggplot(betas |>
+         select(-iteracion) |> 
+         pivot_longer(cols = everything(), names_to = "beta",
+                      values_to = "values")) +
+  geom_density(aes(x = values, color = beta, fill = beta),
+               alpha = 0.6) +
+  geom_vline(data = tibble("x" = c(-2, 5), "beta" = c("beta_0", "beta_1")),
+             aes(xintercept = x, color = beta)) +
+  geom_vline(data =
+               tibble("beta" =  c("beta_0", "beta_1"),
+                      "mean_beta" = c(mean(betas$beta_0), mean(betas$beta_1))),
+             aes(xintercept = mean_beta, group = beta),
+                 color = "#414141", linetype = "dotted") +
+  MetBrewer::scale_color_met_d(palette_name = "Renoir") +
+  MetBrewer::scale_fill_met_d(palette_name = "Renoir") +
+  facet_wrap(~beta, scales = "free_x") +
+  labs(title = "Betas a partir de simular datos",
+       subtitle = "(lo que pasaría tomando una muestra tras otra)") +
+  theme_minimal()
+
+gg_2 <-
+  ggplot(tibble("beta" = c(rep("beta_0", iteraciones), rep("beta_1", iteraciones)),
+                "values" = c(beta_0, beta_1))) +
+  geom_density(aes(x = values, color = beta, fill = beta),
+               alpha = 0.6) +
+  geom_vline(data = tibble("x" = c(-2, 5), "beta" = c("beta_0", "beta_1")),
+             aes(xintercept = x, color = beta)) +
+  geom_vline(data =
+               tibble("beta" =  c("beta_0", "beta_1"),
+                      "mean_beta" = c(mean(betas$beta_0), mean(betas$beta_1))),
+             aes(xintercept = mean_beta, group = beta),
+                 color = "#414141", linetype = "dotted") +
+  MetBrewer::scale_color_met_d(palette_name = "Renoir") +
+  MetBrewer::scale_fill_met_d(palette_name = "Renoir") +
+  facet_wrap(~beta, scales = "free_x") +
+  labs(title = "Betas simulados (a partir de su distribución",
+       subtitle = "(cuando se cumplen las hipótesis)") +
+  theme_minimal()
+
+conjunto <-
+  tibble("beta_1_sample" = betas$beta_1,
+         "beta_1_sim" = beta_1)
+gg_3 <-
+  ggplot(conjunto) +
+  geom_point(aes(x = beta_1_sim, y = beta_1_sample)) +
+  scale_x_continuous(limits = c(4.9, 5.1)) +
+  scale_y_continuous(limits = c(4.9, 5.1)) +
+  coord_equal() +
+  labs(x = "Beta_1 bajo la normal", y = "Beta_1 a partir de muestras simuladas") +
+  theme_minimal()
+library(patchwork)
+gg_1 + gg_2 + gg_3
+```
+
+---
+
+## Resumiendo
+
+::: incremental
+
+1. Visualización. Detección de atípicos, ausentes y errores.
+
+2. Selección de la mejor predictora
+
+3. Formulación del modelo
+
+4. Ajuste e interpretación
+
+5. Si se cumplen las hipótesis podemos inferir los resultados y conclusiones a la población. ¿Son los parámetros significativos?
+
+6. Evaluación: métricas de error
+
+7. Predicción de nuevos valores
+
+:::
+
+---
+
+## Multivariante...
+
+```{r}
+starwars |> 
+  select(name, height, mass, birth_year) |> 
+  rename(age = birth_year) |> 
+  slice(1:7)
+```
+
+¿Y qué sucede cuando [**usamos más de una predictora**]{.hl-orange}?
+
+. . .
+
+Piensa como poder formular el modelo y la varianza residual en términos matriciales para obtener el estimador mínimos cuadrados.
+
+
+
+# MUCHÍSIMAS GRACIAS
+
+
+
+  
+  
