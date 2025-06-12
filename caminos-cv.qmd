@@ -84,7 +84,7 @@ En 2014 defendí mi TFM [**«Machine Learning, non-supervised learning technique
 :::: columns
 ::: {.column width="52%"}
 
-La tesis, titulada «Inference on linear processes in Hilbert and Banach spaces. Statistical analysis of high-dimensional data», desarrolló herramientas para [**modelizar relaciones lineales entre variables aleatorias correladas en el tiempo en contextos de alta dimensionalidad**]{.hl-orange} (infinito-dimensionales). Los resultados fueron aplicados en campos como la economía, mercado eléctrico, meteorología, cambio climático y neurociencia.
+La tesis, titulada «Inference on linear processes in Hilbert and Banach spaces. Statistical analysis of high-dimensional data», desarrolló herramientas para [**modelizar variables aleatorias correladas en el tiempo en contextos de alta dimensionalidad**]{.hl-orange}. Los resultados fueron aplicados en campos como la economía, mercado eléctrico, meteorología, cambio climático y neurociencia.
 
 :::
 
@@ -96,32 +96,13 @@ La tesis, titulada «Inference on linear processes in Hilbert and Banach spaces.
 ::::
 :::
 
+&nbsp;
+
 ::: {.fragment}
 
-  - La tesis fue calificada con [**Cum Laude**]{.hl-orange} y recibió el [**certificado de mención internacional**]{.hl-orange}. Durante el doctorado asistí a diversos cursos de posgrado así como a congresos internacionales y nacionales. En 2018 fui elegido como representante nacional de la SEIO en eventos internacionales y nacionales.
-
+  - La tesis fue calificada con [**Cum Laude**]{.hl-orange} y recibió el [**certificado de mención internacional**]{.hl-orange}. Durante el doctorado asistí a diversos cursos de posgrado así como a congresos internacionales y nacionales.  
 :::
 
----
-
-## Bloque I: formación (académica)
-
-Algunos de los [**resultados teóricos y prácticos más relevantes de la tesis**]{.hl-orange}  acabaron plasmados en el artículo «Prediction of air pollutants PM10 by ARBX(1) processes» (2019). Javier Álvarez Liébana, María Dolores Ruiz Medina. **Stochastic Environ. Research Risk Assess. 33 (Q1)**
-
-:::: columns
-::: {.column width="50%"}
-
-
-En este trabajo se extienden los resultados que se habían desarrollado en los primeros años de la tesis en espacios de Hilbert a espacios de Banach (funciones que permiten una mayor singularidad), demostrando la consistencia (strong-consistency) de los estimadores planteados, las hipótesis necesarias y su aplicación a un caso de eminente interés actual: la [**predicción de partículas contaminantes PM10**]{.hl-orange} (en una región de Normandía), no como dato invididual sino desde una perspectiva de predicción de curvas.
-
-:::
-
-::: {.column width="50%"}
-
-![](scandinavian.jpg)
-
-:::
-::::
 
 ---
 
@@ -245,17 +226,11 @@ Durante estos años he dirigido o codirigido 20 TFM (nota mediana: 8.4) entre lo
 
 ::: {.smaller-un-poquito-text}
 
-::: incremental
-
-
 * «Estudio de predicción del riesgo de mortalidad en personas con VIH utilizando métodos de Machine Learning» (Rafael Farias, 2025) <span style="color:#b49fe8">desarrollando metodologías de Machine Learning adaptadas a datos longitudinales</span>.
 
 * «Clasificación supervisada de imágenes de resonancia magnética para la detección de enfermedad de Alzheimer» (Elisa Caballero, 2024) en el que se <span style="color:#7ae8b5">desarrollaron técnicas de preprocesamiento de imágenes resonancias</span> con el fin de poder <span style="color:#f39b4f">clasificar de manera supervisada</span> los distintos tipos de demencia sin información clínica.
 
 * «Estudio de datos inmunológicos en cáncer mediante el uso de técnicas de análisis composicional» (Olga Fresco, 2024) donde se <span style="color:#b49fe8">desarrollaron técnicas de clustering a datos composicionales</span> para datos inmunológicos.
-
-
-* «Aplicación de técnicas de Deep Learning para la búsqueda e identificación de exoplanetas a través del método del tránsito astronómico» (Iván González, 2023) donde aplicaron <span style="color:#f39b4f">técnicas de Deep Learning para la clasificación de exoplanetas</span> haciendo uso de información fotométrica y espectroscópica.
 
 * «Predicción del voto electoral en España mediante encuestadoras y variables fundamentales» (Enric Palau, 2023) aplicando <span style="color:#f39b4f">técnicas de predicción</span> y <span style="color:#b49fe8">simulación</span> para  la predicción de intención de voto y reparto de escaños.
 
@@ -264,11 +239,6 @@ Durante estos años he dirigido o codirigido 20 TFM (nota mediana: 8.4) entre lo
 * «Aplicación de técnicas de Machine Learning en la clasificación de noticias falsas» (Iván Frías, 2022) en el que se aplicaban <span style="color:#f39b4f">técnicas de modelos de lenguaje y minería de textos para la clasificación</span> de noticias.
 
 :::
-::::
-
-
-
-
 
 ---
 
@@ -371,45 +341,40 @@ Otros [**cursos y seminarios de formación**]{.hl-orange} que he impartido
 
 ## Bloque II: experiencia (inv)
 
-### Becas, premios y contratos competitivos
+#### Becas, premios y contratos competitivos
 
-::: incremental
+::: {.smaller-un-poquito-text}
 
 * [**Contrato FPI (2014-2018) obtenido en concurso competitivo**]{.hl-orange}. Además obtuve dos ayudas competitivas para estancia predoctoral (EEBB-I-15-10244 y EEBB-I-17-1196) para la realización de dos estancias de 3 meses cada una en la Universidad Pierre et Marie Curie (París, 2015 y 2017).
 
 * La tesis leída el 24 de julio de 2018 obtuvo la [**mención de doctorado internacional y Cum Laude**]{.hl-orange}
 
-* Ganador de un [**contratado Juan de la Cierva-Formación**]{.hl-orange} (FJC2018-038562-I, convocatoria 2018) en la USC.
+* Ganador de un [**contrato Juan de la Cierva-Formación**]{.hl-orange} (FJC2018-038562-I, convocatoria 2018) en la USC.
 
 * Nominado como representante la Sociedad Española de Estadística e Investigación Operativa (SEIO) para representarla en el Regional Workshop of European Young Researchers (París, 01/10/2018).
 
-* Nominado como [**representante la Sociedad Española de Estadística e Investigación Operativa (SEIO) para representarla en el 21th European Young Statisticians Meetings**]{.hl-orange} (Serbia, 29/07/2019). 
+* Nominado como representante la Sociedad Española de Estadística e Investigación Operativa (SEIO) para representarla en el 21th European Young Statisticians Meetings (Serbia, 29/07/2019). 
 
 
 :::
 
----
+::: {.fragment}
 
-## Bloque II: experiencia (inv)
+#### Proyectos y grupos de investigación
 
-### Proyectos y grupos de investigación
+::: {.smaller-not-so-text}
 
-::: {.smaller-un-poquito-text}
-
-* [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] Miembro del Grupo de Investigación UCM «Bio2DS (Biomedical and biostatistics data science)» (2023-actualidad). 
+* [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] Miembro del Grupo de Investigación UCM «Bio2DS (Biomedical and biostatistics data science)». 
 
 
 * [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>, <span style="color:#7ae8b5">inf</span>] Dinámica compleja e inferencia no paramétrica (PID2020-116587GB-I00). Proyecto nacional del Ministerio de Ciencia e Innovación (2020 - 2025). Cuantía total: 258 335 €.
 
-* [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] Modelos estocásticos espacio-temporales: generalizaciones, inferencia y análisis de riesgos (A-FQM-345-UGR18). Proyecto financiado por la Junta de Andalucía (2020 - 2022). Cuantía total: 34 150 €.
 
 * [<span style="color:#b49fe8">ec</span>] Campos aleatorios intrínsecos sobre variedades de Riemann (PGC2018-099549-B-I00). Proyecto nacional del Ministerio de Ciencia e Innovación (2019 - 2022). Cuantía total: 26 015 €.
 
-* [<span style="color:#b49fe8">ec</span>] Funcionales de campos aleatorios: teoría asintótica e inferencia. Proyecto nacional del Ministerio de Ciencia e Innovación (2015-2018). Cuantía total: 30 371 € 
-
-* [<span style="color:#f39b4f">cd</span>, <span style="color:#b49fe8">ec</span>] Teoremas límite para procesos espacio-temporales e inferencia funcional asintótica con aplicaciones al análisis de cambio climático, microarrays de CDNA y capital financiero.  Proyecto nacional del Ministerio de Ciencia e Innovación (2014-2015). Cuantía total: 31 473 € 
-
 :::
+:::
+
 
 ---
 
@@ -451,6 +416,31 @@ La tesis estaba centrada en el desarrollo de [**metodologías de estimación y p
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S0167947324001762-gr001_lrg.jpg){width=750px}
 
 :::
+
+---
+
+
+## Bloque III: producción científica
+
+[**1 sexenio de investigación (2016-2022)**]{.hl-orange}
+
+
+Algunos de los [**resultados teóricos y prácticos más relevantes de la tesis**]{.hl-orange}  acabaron plasmados en el artículo «Prediction of air pollutants PM10 by ARBX(1) processes» (2019). Javier Álvarez Liébana, María Dolores Ruiz Medina. **Stochastic Environ. Research Risk Assess. 33 (Q1)**
+
+:::: columns
+::: {.column width="50%"}
+
+
+En este trabajo se extienden los resultados que se habían desarrollado en los primeros años de la tesis en espacios de Hilbert a espacios de Banach (funciones que permiten una mayor singularidad), demostrando la consistencia (strong-consistency) de los estimadores planteados, las hipótesis necesarias y su aplicación a un caso de eminente interés actual: la [**predicción de partículas contaminantes PM10**]{.hl-orange} (en una región de Normandía), no como dato invididual sino desde una perspectiva de predicción de curvas.
+
+:::
+
+::: {.column width="50%"}
+
+![](scandinavian.jpg)
+
+:::
+::::
 
 ---
 
