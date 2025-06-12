@@ -1965,6 +1965,13 @@ En el caso de la regresión lineal univariante pediremos [**4 hipótesis**]{.hl-
 4. [**Independencia**]{.hl-green}: los errores $\left\lbrace \varepsilon_i \right\rbrace_{i=1}^{n}$ deben ser independientes entre sí (el error en una observación no depende de otras). En particular, serán **incorrelados**
 
 
+## Generalizar: inferencia
+
+```{r}
+library(performance)
+ajuste |> check_model()
+```
+
 ---
 
 
